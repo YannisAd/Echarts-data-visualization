@@ -11,7 +11,7 @@ from page.article import Article
 #from query import *
 import time
 
-st.set_page_config(page_title="Dashboard",page_icon="📰",layout="wide")
+st.set_page_config(page_title="Exploration PatriMaths",page_icon="📰",layout="wide")
 #st.subheader("Exploration des donnée PatriMaths")
 st.markdown("##")
 
