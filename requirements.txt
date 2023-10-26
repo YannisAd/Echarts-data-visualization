@@ -12,7 +12,7 @@ pandas
 pandas-profiling==3.2.0
 streamlit==1.22.0
 streamlit-apexjs==0.0.3
-streamlit-card
+
 streamlit-elements==0.1.0
 streamlit-option-menu==0.3.2
 streamlit-pandas-profiling==0.1.3
