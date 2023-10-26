@@ -25,7 +25,7 @@ def Article():
     )
     
     signataire=st.sidebar.multiselect(
-        "Signataire",  44
+        "Signataire",  
         options=df_article["signataire"].unique(),
         default=[],
     )
