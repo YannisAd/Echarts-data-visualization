@@ -8,7 +8,7 @@ oauthlib==3.2.2
 openpyxl==3.1.2
 opt-einsum==3.3.0
 packaging==23.1
-pandas==2.0.1
+pandas
 pandas-profiling==3.2.0
 streamlit==1.22.0
 streamlit-apexjs==0.0.3
