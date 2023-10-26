@@ -7,12 +7,12 @@ from numerize.numerize import numerize
 
 
 
+
 df_article=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
 
 df_article["theme"] = df_article[["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
 
 df_article["renvoi"] = df_article[["renvoi1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "renvoi10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
-
 
 
 def Article():
@@ -25,7 +25,7 @@ def Article():
     )
     
     signataire=st.sidebar.multiselect(
-        "Signataire",
+        "Signataire",  44
         options=df_article["signataire"].unique(),
         default=[],
     )
@@ -166,7 +166,7 @@ def Article():
         # fig.update_layout(barmode='group')
 
         # Affichez le graphique dans Streamlit
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
 
 
         if not df_selection.empty:
@@ -194,7 +194,7 @@ def Article():
                     # fig.update_layout(barmode='group')
 
                     # Affichez le graphique dans Streamlit
-                    st.plotly_chart(fig)
+                    st.plotly_chart(fig, use_container_width=True)
 
 
 

@@ -126,10 +126,20 @@ def Ouvrage():
         st.markdown("""---""")
 
 
-    if not df_selection.empty: 
-        with st.expander("Filter par collonnes"):
-            showData=st.multiselect('Filter: ',df_selection.columns,default=["titre","auteur_autrice1","auteur_autrice2","auteur_autrice3","auteur_autrice4","auteur_autrice5","auteur_autrice6","auteur_autrice7","auteur_autrice8","auteur_autrice9","auteur_autrice10","theme","organisme_edition","lieu_publication","annee_publication","langue","responsable_edition"])
-            
+
+
+    # Votre DataFrame df_selection
+
+    # Assurez-vous que la colonne 'annee_publication' est de type numérique (int ou float)
+    df_selection['annee_publication'] = pd.to_numeric(df_selection['annee_publication'], errors='coerce')
+
+    # Remplacez les NaN par une valeur par défaut (par exemple, 0)
+    df_selection['annee_publication'].fillna(0, inplace=True)
+
+    if not df_selection.empty:
+        with st.expander("Filter par colonnes"):
+            showData = st.multiselect('Filter: ', df_selection.columns, default=["titre", "auteur_autrice1", "auteur_autrice2", "auteur_autrice3", "auteur_autrice4", "auteur_autrice5", "auteur_autrice6", "auteur_autrice7", "auteur_autrice8", "auteur_autrice9", "auteur_autrice10", "theme", "organisme_edition", "lieu_publication", "annee_publication", "langue", "responsable_edition"])
+        
         # Afficher le tableau
         st.dataframe(df_selection[showData], use_container_width=True)
         
@@ -147,14 +157,30 @@ def Ouvrage():
         )
 
         if not showData:
-             st.warning("Sélectionnez au moins un champ à afficher.")
+            st.warning("Sélectionnez au moins un champ à afficher.")
 
+        st.markdown("---")
+        st.subheader("Répartition des thèmes selon l'année de publication")
+
+        # Créer une nouvelle colonne 'decade' en regroupant les années par intervalles de 10 ans
+        df_selection['decade'] = (df_selection['annee_publication'] // 50) * 50
+        
+        # Group by the 'decade' and 'theme1' columns and count the occurrences
+        theme_decade_counts = df_selection.groupby(['decade', 'theme1']).size().reset_index(name='count')
+
+        # Create a Plotly Express bar chart
+        fig = px.bar(
+            theme_decade_counts,
+            x='decade',
+            y='count',
+            color='theme1',
+            labels={'count': 'Nombre d\'ouvrages'},
+            title="",
+        )
+
+        st.plotly_chart(fig, use_container_width=True)
+            
+            
         
 
-    else:
-        st.warning("Aucun élément trouvé avec la sélection actuelle.")
-
-    
-
-#graphs
-
+        #graphs
