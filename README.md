@@ -119,16 +119,29 @@ Once the command is executed, the repository will be cloned into a folder called
 
 <table>
   <tr>
-    <th>Fichier</th>
     <th>Méthode / Fonction</th>
     <th>Adaptations pour Votre Projet</th>
     <th>Dépendances à Installer</th>
   </tr>
   <tr>
-    <td rowspan="19"><strong>omekaToRDF.py</strong></td>
+    <td>N/A (fichier de constantes)</td>
+    <td>Adapter les constantes liées aux chemins et à la configuration du CMS Omeka S</td>
+    <td>Aucune dépendance externe spécifique</td>
+  </tr>
+</table>
+
+
+
+<table>
+  <tr>
+    <th>Méthode / Fonction</th>
+    <th>Adaptations pour Votre Projet</th>
+    <th>Dépendances à Installer</th>
+  </tr>
+  <tr>
     <td>alterFilesPermissions()</td>
     <td>Configurer les répertoires selon votre système (<code>FILES_REPOSITORY</code>, <code>BACKUP_REPOSITORY</code>, <code>LOGS_REPOSITORY</code>)</td>
-    <td rowspan="7">
+    <td>
       <ul>
         <li><code>requests</code> pour les appels à l'API</li>
         <li><code>rdflib</code> pour manipuler les données RDF</li>
@@ -139,40 +152,35 @@ Once the command is executed, the repository will be cloned into a folder called
   <tr>
     <td>createBackup()</td>
     <td>Ajuster le chemin pour stocker les sauvegardes (<code>BACKUP_REPOSITORY</code>)</td>
+    <td></td>
   </tr>
   <tr>
     <td>cleanRepository()</td>
     <td>Configurer la durée de conservation des fichiers anciens (<code>MAX_DAYS</code>)</td>
+    <td></td>
   </tr>
   <tr>
     <td>configureLogging()</td>
     <td>Configurer l'emplacement des fichiers de logs (<code>LOGS_REPOSITORY</code>)</td>
+    <td></td>
   </tr>
   <tr>
     <td>saveNamespaces()</td>
     <td>Ajuster l'URL de l'API Omeka S (<code>API_PATH</code>)</td>
+    <td></td>
   </tr>
+
   <tr>
     <td>saveResources()</td>
     <td>Ajuster l'URL de l'API et configurer selon les ressources nécessaires</td>
+    <td></td>
   </tr>
-  <tr>
-    <td rowspan="9"><strong>constants.py</strong></td>
-    <td>N/A (fichier de constantes)</td>
-    <td>Adapter les constantes liées aux chemins et à la configuration du CMS Omeka S</td>
-    <td>Aucune dépendance externe spécifique</td>
-  </tr>
-  <tr>
-    <td rowspan="5"><strong>triplesCreation.py</strong></td>
-    <td>initializeRDFdatabase()</td>
-    <td>Configurer les espaces de noms pour les propriétés RDF</td>
-    <td rowspan="4">
-      <ul>
-        <li><code>rdflib</code> pour manipuler les données RDF</li>
-        <li><code>os</code> pour les opérations sur les fichiers et répertoires</li>
-      </ul>
-    </td>
-  </tr>
+</table>
+
+
+
+</table>
+
 
 
   <tr>
@@ -203,7 +211,7 @@ Once the command is executed, the repository will be cloned into a folder called
     <td>Configurer les espaces de noms pour les propriétés RDF des collections</td>
   </tr>
 
-
+amusons nous dans la propréiété des jeux je ne pasc 
 
 <tr>
     <td rowspan="9"><strong>constants.py</strong></td>
