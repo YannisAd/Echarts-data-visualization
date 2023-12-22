@@ -128,7 +128,7 @@ Once the command is executed, the repository will be cloned into a folder called
     <td rowspan="13"><strong>omekaToRDF.py</strong></td>
     <td>alterFilesPermissions()</td>
     <td>Configurer les répertoires selon votre système (<code>FILES_REPOSITORY</code>, <code>BACKUP_REPOSITORY</code>, <code>LOGS_REPOSITORY</code>)</td>
-    <td rowspan="2">
+    <td rowspan="6">
       <ul>
         <li><code>requests</code> pour les appels à l'API</li>
         <li><code>rdflib</code> pour manipuler les données RDF</li>
@@ -136,27 +136,66 @@ Once the command is executed, the repository will be cloned into a folder called
       </ul>
     </td>
   </tr>
-  <!-- ... Autres lignes pour les fonctions de omekaToRDF.py ... -->
   <tr>
-    <td>saveResources()</td>
-    <td>Ajuster l'URL de l'API (<code>API_PATH</code>) pour votre instance Omeka S</td>
+    <td>createBackup()</td>
+    <td>Ajuster le chemin pour stocker les sauvegardes (<code>BACKUP_REPOSITORY</code>)</td>
   </tr>
   <tr>
-    <td rowspan="4"><strong>triplesCreation.py</strong></td>
+    <td>cleanRepository()</td>
+    <td>Configurer la durée de conservation des fichiers anciens (<code>MAX_DAYS</code>)</td>
+  </tr>
+  <tr>
+    <td>configureLogging()</td>
+    <td>Configurer l'emplacement des fichiers de logs (<code>LOGS_REPOSITORY</code>)</td>
+  </tr>
+  <tr>
+    <td>saveNamespaces()</td>
+    <td>Ajuster l'URL de l'API Omeka S (<code>API_PATH</code>)</td>
+  </tr>
+  <tr>
+    <td>saveResources()</td>
+    <td>Ajuster l'URL de l'API et configurer selon les ressources nécessaires</td>
+  </tr>
+  <tr>
+    <td rowspan="8"><strong>constants.py</strong></td>
+    <td>N/A (fichier de constantes)</td>
+    <td>Adapter les constantes liées aux chemins et à la configuration du CMS Omeka S</td>
+    <td>Aucune dépendance externe spécifique</td>
+  </tr>
+  <tr>
+    <td rowspan="5"><strong>triplesCreation.py</strong></td>
     <td>initializeRDFdatabase()</td>
-    <td>
+    <td>Configurer les espaces de noms pour les propriétés RDF</td>
+    <td rowspan="3">
       <ul>
-        <li>Vérifier et ajuster les espaces de noms (<code>namespaces</code>) selon vos données Omeka S</li>
-      </ul>
-    </td>
-    <td rowspan="2">
-      <ul>
-        <li><code>rdflib</code> pour la manipulation des données RDF</li>
+        <li><code>rdflib</code> pour manipuler les données RDF</li>
         <li><code>os</code> pour les opérations sur les fichiers et répertoires</li>
       </ul>
     </td>
   </tr>
-  <!-- ... Autres lignes pour les fonctions de triplesCreation.py ... -->
+
+<tr>
+    <td>saveGraphToFile()</td>
+    <td>Configurer le chemin du fichier de sortie RDF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>createItemsTriples()</td>
+    <td>Configurer les espaces de noms pour les propriétés RDF des éléments</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>createMediasTriples()</td>
+    <td>Configurer les espaces de noms pour les propriétés RDF des médias</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>createCollectionsTriples()</td>
+    <td>Configurer les espaces de noms pour les propriétés RDF des collections</td>
+    <td></td>
+  </tr>
+
+  
 </table>
 
 
