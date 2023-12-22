@@ -36,10 +36,10 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#installation">Installation</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#ZIP-download">Download ZIP</a></li>
+        <li><a href="#Clone-repository">Clone repository</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -71,7 +71,7 @@ It is currently in use for a project dedicated to Henri Poincaré (1854-1912), f
 
 ### Built With
 
-* [![Python][Python.py]][Python.py]
+* [![Python][Python-url]][Python.py]
 
 
 
@@ -80,36 +80,32 @@ It is currently in use for a project dedicated to Henri Poincaré (1854-1912), f
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+This guide will help you download the Omekas2RDF project locally on your computer. You can choose between two methods: directly download the file or clone the GitHub repository.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
+
+### ZIP-download
+
+1. At the top right of the page click on the green “Code” button.
+2. Select “Download ZIP”.
+3. Once the download is complete, extract the contents of the ZIP file to the folder of your choice on your computer.
+
+
+### Clone-repository
+
+
+1. Open a terminal or command prompt on your computer.
+2. Make sure you have Git installed. If not, you can download it [https://github.com/git-guides/install-git](here) and follow the installation instructions.
+3. In the terminal, run the following command:
+```sh
+git clone https://github.com/nlasolle/omekas2rdf.git
+```
+
+Once the command is executed, the repository will be cloned into a folder called "omekas2rdf" in the directory you are located in.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,8 +213,8 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [Python.py]: https://www.python.org/
 
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[python-url]: https://www.python.org/static/community_logos/python-logo.png
+
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
