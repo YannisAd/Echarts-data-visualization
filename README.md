@@ -31,7 +31,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <a href="#Omeka-installation">Details about the Omeka S installation</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -61,10 +60,6 @@
 
 This Python script has been created for the daily export of an Omeka S database to an RDF database (Turtle syntax).
 
-
-
-## Omeka-installation
-
 Omeka S is a CMS (Content Management System) dedicated to the editing and the publishing of collections. It allows to create elements and publish them on a website based on the use of blocks and modules. Is is particularly adapted for cultural heritage collections (museums, archive places, libraries, etc).
 
 It is currently in use for a project dedicated to Henri Poincaré (1854-1912), famous French man of science, managed by the Archives Henri-Poincaré laboratory. The website is available at http://henripoincare.fr.
@@ -76,16 +71,9 @@ It is currently in use for a project dedicated to Henri Poincaré (1854-1912), f
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [![Python][Python.py]][Python.py]
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,7 +214,9 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+
+[Python.py]: https://www.python.org/
+
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
