@@ -43,7 +43,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#run-on-server">Run on server </a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -71,7 +71,7 @@ It is currently in use for a project dedicated to Henri Poincaré (1854-1912), f
 
 ### Built With
 
-* [![Python][Python-url]][Python.py]
+[![Python][Python-url]][Python.py]
 
 
 
@@ -98,8 +98,9 @@ This guide will help you download the Omekas2RDF project locally on your compute
 
 
 1. Open a terminal or command prompt on your computer.
-2. Make sure you have Git installed. If not, you can download it [https://github.com/git-guides/install-git](here) and follow the installation instructions.
+2. Make sure you have Git installed. If not, you can download it [here](https://github.com/git-guides/install-git) and follow the installation instructions.
 3. In the terminal, run the following command:
+
 ```sh
 git clone https://github.com/nlasolle/omekas2rdf.git
 ```
@@ -111,12 +112,45 @@ Once the command is executed, the repository will be cloned into a folder called
 
 
 
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<table>
+  <tr>
+    <th>Fichier</th>
+    <th>Fonctions Principales</th>
+    <th>Adaptations pour Votre Projet</th>
+  </tr>
+  <tr>
+    <td rowspan="6"><strong>omekaToRDF.py</strong></td>
+    <td>alterFilesPermissions()<br>createBackup()<br>cleanRepository()<br>configureLogging()<br>saveNamespaces()<br>saveResources()</td>
+    <td>
+      <ul>
+        <li>Configurer les répertoires selon votre système (<code>FILES_REPOSITORY</code>, <code>BACKUP_REPOSITORY</code>, <code>LOGS_REPOSITORY</code>)</li>
+        <li>Ajuster l'URL de l'API (<code>API_PATH</code>) pour votre instance Omeka S</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="1"><strong>constants.py</strong></td>
+    <td>N/A (fichier de constantes)</td>
+    <td>Adapter les constantes liées aux chemins et à la configuration du CMS Omeka S</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><strong>triplesCreation.py</strong></td>
+    <td>initializeRDFdatabase()<br>saveGraphToFile()<br>createItemsTriples()<br>createMediasTriples()<br>createCollectionsTriples()</td>
+    <td>
+      <ul>
+        <li>Vérifier et ajuster les espaces de noms (<code>namespaces</code>) selon vos données Omeka S</li>
+        <li>Configurer le chemin du fichier de sortie (<code>ITEMS_FILE</code>, <code>MEDIAS_FILE</code>, <code>COLLECTIONS_FILE</code>)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
