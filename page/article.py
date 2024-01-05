@@ -17,6 +17,8 @@ df_article["renvoi"] = df_article[["renvoi1", "theme2", "theme3", "theme4", "the
 
 def Article():
 
+
+    
     
     titre=st.sidebar.multiselect(
         "Nom de l'article",
@@ -92,10 +94,14 @@ def Article():
 
     if not df_selection.empty:
 
+        
+
         total_nbr_lignes = df_selection.shape[0]
         encyclopedie_mode = df_selection['encyclopedie'].mode().iloc[0]
-        nbr_colonnes_mean = float(df_selection['nbr_colonnes'].mean())
+        nbr_colonnes_mean = pd.to_numeric(df_selection['nbr_colonnes'], errors='coerce').mean()
         theme = df_selection['theme1'].mode().iloc[0]
+
+
 
 
         total1,total2,total3,total4=st.columns(4,gap='large')
@@ -121,34 +127,82 @@ def Article():
 
     
     if not df_selection.empty: 
-        with st.expander("Filter par collonnes"):
-            showData=st.multiselect('Filter: ',df_selection.columns,default=["encyclopedie","volume","nom","complement_nom","signataire","num_page_debut","num_page_fin","nbr_colonnes","theme","designant","renvoi", "commentaire"])
+        with st.expander("Filter par colonnes"):
+            showData = st.multiselect('Filter: ', df_selection.columns, default=["encyclopedie", "volume", "nom", "complement_nom", "signataire", "num_page_debut", "num_page_fin", "nbr_colonnes", "theme", "designant", "renvoi", "commentaire"])
             
-        # Afficher le tableau
-        st.dataframe(df_selection[showData], use_container_width=True)
-        
-        # Convertir le DataFrame en CSV avec encodage UTF-8
-        csv_data = df_selection[showData].to_csv().encode('utf-8')
-        
-        # Ajouter un bouton de téléchargement en CSV
-        st.download_button(
-            label="Télécharger en CSV (UTF-8)",
-            data=csv_data,
-            key="download-csv",
-            on_click=None,  # Laisser "None" pour le téléchargement immédiat
-            help="Téléchargez le tableau au format CSV.",
-            mime="text/csv"  # Spécifiez le type MIME du fichier
-        )
-
         if not showData:
-             st.warning("Sélectionnez au moins un champ à afficher.")
-
-        
-
+            st.warning("Sélectionnez au moins un champ à afficher.")
+        else:
+            # Afficher le tableau
+            st.dataframe(df_selection[showData], use_container_width=True)
+            
+            # Convertir le DataFrame en CSV avec encodage UTF-8
+            csv_data = df_selection[showData].to_csv().encode('utf-8')
+            
+            # Ajouter un bouton de téléchargement en CSV
+            st.download_button(
+                label="Télécharger en CSV (UTF-8)",
+                data=csv_data,
+                key="download-csv",  # Ajoutez la clé ici
+                on_click=None,  # Laissez "None" pour le téléchargement immédiat
+                help="Téléchargez le tableau au format CSV.",
+                mime="text/csv"  # Spécifiez le type MIME du fichier
+            )
     else:
         st.warning("Aucun élément trouvé avec la sélection actuelle.")
 
     
+    
+    # ...
+
+   # Ajout d'un tableau avec les colonnes spécifiées
+    if not df_selection.empty:
+        
+            ouvrages_cites_data = []
+
+            # Parcourir les lignes du DataFrame sélectionné et collecter les données des ouvrages cités
+            for index, row in df_selection.iterrows():
+                ouvrages = []
+                for i in range(1, 12):
+                    ouvrage_col = f"ouvrage_cité_{i}"
+                    if pd.notnull(row[ouvrage_col]):
+                        ouvrages.append(str(row[ouvrage_col]))
+                
+                # Créer un dictionnaire avec les données de chaque article
+                if ouvrages:
+                    ouvrages_cites_data.append({
+                        'Nom de l\'article': row['nom'],
+                        'Encyclopédie': row['encyclopedie'],
+                        'Volume': row['volume'],
+                        'Ouvrage Cités 1': ouvrages[0] if len(ouvrages) > 0 else '',
+                        'Ouvrage Cités 2': ouvrages[1] if len(ouvrages) > 1 else '',
+                        'Ouvrage Cités 3': ouvrages[2] if len(ouvrages) > 2 else '',
+                        'Ouvrage Cités 4': ouvrages[3] if len(ouvrages) > 3 else '',
+                        'Ouvrage Cités 5': ouvrages[4] if len(ouvrages) > 4 else '',
+                        'Ouvrage Cités 6': ouvrages[5] if len(ouvrages) > 5 else '',
+                        'Ouvrage Cités 7': ouvrages[6] if len(ouvrages) > 6 else '',
+                        'Ouvrage Cités 8': ouvrages[7] if len(ouvrages) > 7 else '',
+                        'Ouvrage Cités 9': ouvrages[8] if len(ouvrages) > 8 else '',
+                        'Ouvrage Cités 10': ouvrages[9] if len(ouvrages) > 9 else '',
+                        'Ouvrage Cités 11': ouvrages[10] if len(ouvrages) > 10 else '',
+                    })
+
+            # Créer un DataFrame à partir de la liste de dictionnaires
+            ouvrages_cites_df = pd.DataFrame(ouvrages_cites_data, columns=['Nom de l\'article', 'Encyclopédie', 'Volume', 'Ouvrage Cités 1', 'Ouvrage Cités 2', 'Ouvrage Cités 3', 'Ouvrage Cités 4', 'Ouvrage Cités 5', 'Ouvrage Cités 6', 'Ouvrage Cités 7', 'Ouvrage Cités 8', 'Ouvrage Cités 9', 'Ouvrage Cités 10', 'Ouvrage Cités 11'])
+
+            # Afficher le DataFrame dans Streamlit
+            if not ouvrages_cites_df.empty:
+                st.dataframe(ouvrages_cites_df)
+            else:
+                st.warning("Aucun ouvrage cité trouvé pour la sélection actuelle.")
+
+
+
+
+
+
+
+
 
 
     if not df_selection.empty:
@@ -172,7 +226,14 @@ def Article():
         if not df_selection.empty:
         # Calculez le nombre de pages par article
             if not df_selection["num_page_debut"].empty and not df_selection["num_page_fin"].empty:
-                valid_pages = df_selection["num_page_fin"] >= df_selection["num_page_debut"]
+                # Convertir les colonnes 'num_page_fin' et 'num_page_debut' en valeurs numériques
+                df_selection['num_page_fin'] = pd.to_numeric(df_selection['num_page_fin'], errors='coerce')
+                df_selection['num_page_debut'] = pd.to_numeric(df_selection['num_page_debut'], errors='coerce')
+
+                # Filtrer les lignes avec des pages valides
+                valid_pages = df_selection["num_page_fin"].fillna(0) >= df_selection["num_page_debut"].fillna(0)
+
+                
                 
                 # Filtrer les lignes avec des pages valides
                 df_valid_selection = df_selection[valid_pages]
@@ -195,7 +256,4 @@ def Article():
 
                     # Affichez le graphique dans Streamlit
                     st.plotly_chart(fig, use_container_width=True)
-
-
-
 
