@@ -3,6 +3,10 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 from numerize.numerize import numerize
+import networkx as nx
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 
 
@@ -10,9 +14,13 @@ from numerize.numerize import numerize
 
 df_article=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
 
+df_article_renvoi=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
+
+
 df_article["theme"] = df_article[["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
 
 df_article["renvoi"] = df_article[["renvoi1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "renvoi10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
+
 
 
 def Article():
@@ -152,8 +160,66 @@ def Article():
         st.warning("Aucun élément trouvé avec la sélection actuelle.")
 
     
+ 
+
     
-    # ...
+
+  
+    
+    
+
+    def display_references_tree(df):
+            # Create a directed graph
+            G = nx.DiGraph()
+
+            # Add nodes for each article
+            for index, row in df.iterrows():
+                article_name = f"{row['nom']} ({row['encyclopedie']})"
+                G.add_node(article_name)
+
+                # Iterate over renvoi columns
+                for i in range(1, 11):
+                    ref_name_col = f"renvoi{i}"
+                    ref_name = row[ref_name_col]
+                    if pd.notnull(ref_name) and ref_name.strip() != '':
+                        ref_id = f"{ref_name} ({row['encyclopedie']})"
+                        G.add_edge(article_name, ref_id)
+
+            # Calculate betweenness centrality
+            betweenness_centrality = nx.betweenness_centrality(G)
+
+            # Layout the graph for better visibility
+            pos = nx.kamada_kawai_layout(G)  # Change to a different layout
+
+            # Get node colors based on betweenness centrality
+            node_colors = [betweenness_centrality[node] for node in G.nodes()]
+
+            # Use seaborn to create a red color palette
+            red_palette = sns.color_palette("Reds", as_cmap=True)
+
+            # Display the graph
+            plt.figure(figsize=(16, 12))  # Adjust figure size
+            nx.draw(G, pos, with_labels=True, font_size=7, font_color='black', node_size=1000, node_color=node_colors, cmap=red_palette, edge_color='black', linewidths=2, alpha=0.85)
+
+            # Add a legend for node color
+            plt.axis('off')  # Disable axes
+            plt.margins(0.2, 0.2)  # Add margins
+            plt.gca().autoscale(tight=True)  # Automatically scale
+            st.pyplot(plt.gcf())  # Use st.pyplot to display the graph in Streamlit
+
+
+
+
+
+        
+
+
+
+
+    if not df_selection.empty:
+        with st.expander("Afficher l'arborescence des renvois"):
+            display_references_tree(df_selection)
+
 
    # Ajout d'un tableau avec les colonnes spécifiées
     if not df_selection.empty:
@@ -256,4 +322,3 @@ def Article():
 
                     # Affichez le graphique dans Streamlit
                     st.plotly_chart(fig, use_container_width=True)
-
