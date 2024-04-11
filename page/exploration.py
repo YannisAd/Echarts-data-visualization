@@ -1,80 +1,100 @@
 import streamlit as st
 import pandas as pd
+import json
 
-# Chargez les DataFrames
-df_ouvrage=pd.read_excel("data.xlsx", sheet_name='ouvrage') #, sheet_name='Sheet1'
-df_encyclopedie=pd.read_excel("data.xlsx", sheet_name='encyclopedie') #, sheet_name='Sheet1'
-df_article=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
-df_personne=pd.read_excel("data.xlsx", sheet_name='personne') #, sheet_name='Sheet1'
-
-df_revu=pd.read_excel("data.xlsx", sheet_name='revue') #, sheet_name='Sheet1'
-df_revu_cite=pd.read_excel("data.xlsx", sheet_name='revue_cité') #, sheet_name='Sheet1'
-df_personne_cite=pd.read_excel("data.xlsx", sheet_name='personne_cité') #, sheet_name='Sheet1'
-df_ouvrage_cite=pd.read_excel("data.xlsx", sheet_name='ouvrage_cité') #, sheet_name='Sheet1'
-
-# Fusionnez les DataFrames pour associer les informations
-personne_cité_article = df_personne_cite.merge(df_article, left_on="id_article", right_on="id", how="left")
-personne_cité_article = personne_cité_article.merge(df_personne, left_on="id_personne", right_on="id", how="left")
-
-ouvrage_cite_article = df_ouvrage_cite.merge(df_article, left_on="id_article", right_on="id", how="left")
-ouvrage_cite_article = ouvrage_cite_article.merge(df_ouvrage, left_on="id_ouvrage", right_on="id", how="left")
-revu_cite_article = df_revu_cite.merge(df_article, left_on="id_article", right_on="id", how="left")
-revu_cite_article = revu_cite_article.merge(df_revu, left_on="id_revue", right_on="id", how="left")
-revu_cite_article = revu_cite_article.merge(df_personne, left_on="id_auteur_autrice", right_on="id", how="left", suffixes=("_revu", "_personne"))
-
-df_article["renvoi"] = df_article[["renvoi1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "renvoi10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
-df_article["theme"] = df_article[["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
-
+# Requête SPARQL pour récupérer tous les articles avec leurs informations
 
 def Exploration():
-    
-    
-    article = st.sidebar.multiselect("Nom de l'article", options=df_article["nom"].unique(), default=[])
-    encyclopedie = st.sidebar.multiselect("Titre", options=df_encyclopedie["titre"].unique(), default=[])
-    ouvrage = st.sidebar.multiselect("Ouvrage cité", options=ouvrage_cite_article["titre"].unique(), default=[])
-    revu = st.sidebar.multiselect("Nom de la revue citée", options=revu_cite_article["titre"].unique(), default=[])
-    personne = st.sidebar.multiselect("Auteur / autrice", options=df_personne["nom_complet"].unique(), default=[])
-    theme = st.sidebar.multiselect("Thème", options=df_article["theme1"].unique(), default=[])
-    renvoie = st.sidebar.multiselect("Article renvoyé", options=df_article["renvoi"].unique(), default=[])
-    personne_cite = st.sidebar.multiselect("Auteur / autrice cité", options=personne_cité_article["nom_complet"].unique(), default=[])
+    # Appel de la fonction query_sparql avec la requête All_Article_Query
+    with open('./ressources/complete_article.json', "r") as f:
+        results = json.load(f)
 
-    conditions = []
+    # Accéder aux données JSON retournées
+    bindings = results["results"]["bindings"]
 
-    if article:
-        conditions.append(personne_cité_article["nom"].isin(article))
-    if ouvrage:
-        conditions.append(ouvrage_cite_article["titre"].isin(ouvrage))
-    if revu:
-        conditions.append(revu_cite_article["titre"].isin(revu))
-    if personne:
-        conditions.append(personne_cité_article["nom_complet"].isin(personne))
-    if theme:
-        conditions.append(personne_cité_article["theme1"].isin(theme))
-    if renvoie:
-        conditions.append(personne_cité_article["renvoi"].isin(renvoie))
-    if personne_cite:
-        conditions.append(personne_cité_article["nom_complet"].isin(personne_cite))
+    # Créer une liste pour chaque champ
+    article = []
+    encyclopedie = []
+    volume = []
+    titre = []
+    nbr_colonne = []
+    complement_titre = []
+    num_page_debut = []
+    num_page_fin = []
+    signataire = []
+    themes = []
+    ref_histoire = []
+    revue_citee = []
 
-    if conditions:
-        filtered_df = personne_cité_article[conditions[0]]
-        for condition in conditions[1:]:
-            filtered_df = filtered_df[condition]
+    for item in bindings:
+        article.append(item["article"]["value"])
+        encyclopedie.append(item.get("encyclopedie", {}).get("value", None))
+        volume.append(item.get("volume", {}).get("value", None))
+        titre.append(item["titre"]["value"])
+        nbr_colonne.append(item.get("nbr_colonne", {}).get("value", None))
+        complement_titre.append(item.get("complement_titre", {}).get("value", None))
+        num_page_debut.append(item.get("num_page_debut", {}).get("value", None))
+        num_page_fin.append(item.get("num_page_fin", {}).get("value", None))
+        signataire.append(item.get("signataire", {}).get("value", None))
+        themes.append(item.get("themes", {}).get("value", None))
+        ref_histoire.append(item.get("ref_histoire", {}).get("value", None))
+        revue_citee.append(item.get("revue_citee", {}).get("value", None))
+
+    # Créer un DataFrame pandas avec les données extraites
+    df_results = pd.DataFrame({
+        "Titre": titre,
+        "Encyclopedie": encyclopedie,
+        "Volume": volume,
+       
+        "Nombre de Colonnes": nbr_colonne,
+        "Complément de Titre": complement_titre,
+        "Numéro de Page de Début": num_page_debut,
+        "Numéro de Page de Fin": num_page_fin,
+        "Signataire": signataire,
+        "Thèmes": themes,
+        "Référence à l'Histoire": ref_histoire,
+        "Revue Citée": revue_citee
+    })
+
+    # Remplacer les valeurs None par des chaînes vides dans le DataFrame
+    df_results = df_results.fillna('')
+
+    # Filtrer par colonnes
+    if not df_results.empty:
+        with st.sidebar:
+            filters = {}
+            for col in df_results.columns:
+                if col != "Titre":
+                    filters[col] = st.multiselect(f'{col}:', [''] + df_results[col].unique())
+
+        # Appliquer les filtres
+        df_filtered = df_results
+        for col, vals in filters.items():
+            if vals and '' not in vals:
+                df_filtered = df_filtered[df_filtered[col].isin(vals)]
+
+        # Afficher le tableau filtré
+        st.dataframe(df_filtered, use_container_width=True)
+
+        # Convertir le DataFrame en CSV avec encodage UTF-8
+        csv_data = df_filtered.to_csv(index=False).encode('utf-8')
+
+        # Ajouter un bouton de téléchargement en CSV
+        st.download_button(
+            label="Télécharger en CSV (UTF-8)",
+            data=csv_data,
+            key="download-csv-article",
+            on_click=None,  # Laisser "None" pour le téléchargement immédiat
+            help="Téléchargez le tableau au format CSV (UTF-8).",
+            mime="text/csv"  # Spécifiez le type MIME du fichier
+        )
+
+        if not filters:
+            st.warning("Sélectionnez au moins un champ à filtrer.")
     else:
-        filtered_df = personne_cité_article
+        st.warning("Aucun élément trouvé avec la sélection actuelle.")
 
-    
-
-
-
-
-
-    if not filtered_df.empty: 
-        with st.expander("Filter par collonnes"):
-            showData=st.multiselect('Filter: ',filtered_df.columns,default=["encyclopedie","volume","nom","theme","signataire","renvoi","titre_complet","auteur_autrice1","annee_publication","theme1","auteur_autrice10","nom_complet","titre"])
-            
-        # Afficher le tableau
-        st.dataframe(filtered_df[showData], use_container_width=True)
-        
-
-# Appel de la fonction Exploration pour l'affichage des résultats
-Exploration()
+# Vérifier si le script est exécuté en tant que script principal
+if __name__ == "__main__":
+    # Appel de votre fonction Exploration()
+    Exploration()

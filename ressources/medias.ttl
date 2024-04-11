@@ -1,0 +1,1451 @@
+@prefix ns1: <http://omeka.org/s/vocabs/o#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://patrimaths.fr/api/media/1220> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/988> ;
+    ns1:source "1 Dictionnaire_universel_françois_et_latin_[...]_bpt6k50980z.pdf" .
+
+<http://patrimaths.fr/api/media/1221> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/953> ;
+    ns1:source "1.pdf" .
+
+<http://patrimaths.fr/api/media/1222> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/954> ;
+    ns1:source "2.pdf" .
+
+<http://patrimaths.fr/api/media/1226> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/955> ;
+    ns1:source "3.pdf" .
+
+<http://patrimaths.fr/api/media/1227> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/957> ;
+    ns1:source "5.pdf" .
+
+<http://patrimaths.fr/api/media/1228> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/958> ;
+    ns1:source "6.pdf" .
+
+<http://patrimaths.fr/api/media/1229> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/959> ;
+    ns1:source "7.pdf" .
+
+<http://patrimaths.fr/api/media/1230> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/960> ;
+    ns1:source "8.pdf" .
+
+<http://patrimaths.fr/api/media/1231> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/961> ;
+    ns1:source "9.pdf" .
+
+<http://patrimaths.fr/api/media/1232> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/962> ;
+    ns1:source "10.pdf" .
+
+<http://patrimaths.fr/api/media/1233> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/963> ;
+    ns1:source "11.pdf" .
+
+<http://patrimaths.fr/api/media/1234> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/964> ;
+    ns1:source "12.pdf" .
+
+<http://patrimaths.fr/api/media/1235> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/965> ;
+    ns1:source "13.pdf" .
+
+<http://patrimaths.fr/api/media/1237> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/967> ;
+    ns1:source "15.pdf" .
+
+<http://patrimaths.fr/api/media/1239> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/969> ;
+    ns1:source "17.pdf" .
+
+<http://patrimaths.fr/api/media/1240> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/970> ;
+    ns1:source "18.pdf" .
+
+<http://patrimaths.fr/api/media/1241> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/971> ;
+    ns1:source "19.pdf" .
+
+<http://patrimaths.fr/api/media/1242> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/972> ;
+    ns1:source "20.pdf" .
+
+<http://patrimaths.fr/api/media/1243> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/973> ;
+    ns1:source "21.pdf" .
+
+<http://patrimaths.fr/api/media/1244> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/974> ;
+    ns1:source "22.pdf" .
+
+<http://patrimaths.fr/api/media/1245> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/975> ;
+    ns1:source "23.pdf" .
+
+<http://patrimaths.fr/api/media/1246> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/976> ;
+    ns1:source "24.pdf" .
+
+<http://patrimaths.fr/api/media/1247> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/977> ;
+    ns1:source "25.pdf" .
+
+<http://patrimaths.fr/api/media/1248> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/978> ;
+    ns1:source "26.pdf" .
+
+<http://patrimaths.fr/api/media/1249> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1081> ;
+    ns1:source "1 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39779z.pdf" .
+
+<http://patrimaths.fr/api/media/1250> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1082> ;
+    ns1:source "2 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k397805.pdf" .
+
+<http://patrimaths.fr/api/media/1251> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1083> ;
+    ns1:source "3 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39781h.pdf" .
+
+<http://patrimaths.fr/api/media/1252> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1084> ;
+    ns1:source "4 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39782v.pdf" .
+
+<http://patrimaths.fr/api/media/1253> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1085> ;
+    ns1:source "5 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k397836.pdf" .
+
+<http://patrimaths.fr/api/media/1254> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1086> ;
+    ns1:source "6 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39784j.pdf" .
+
+<http://patrimaths.fr/api/media/1255> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1087> ;
+    ns1:source "7 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39785w.pdf" .
+
+<http://patrimaths.fr/api/media/1256> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1088> ;
+    ns1:source "8 Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k397867.pdf" .
+
+<http://patrimaths.fr/api/media/1257> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1089> ;
+    ns1:source "supplementaire Dictionnaire_encyclopédique_et_biographique_de_[...]Lami_Eugène-Oscar_bpt6k39787k.pdf" .
+
+<http://patrimaths.fr/api/media/1258> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1210> ;
+    ns1:source "Encyclopédie_universelle___répertoire_classique_[...]Marchal_Charles_bpt6k9631356t.pdf" .
+
+<http://patrimaths.fr/api/media/1259> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1073> ;
+    ns1:source "1 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5839369k.pdf" .
+
+<http://patrimaths.fr/api/media/1260> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1074> ;
+    ns1:source "2 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k58393863.pdf" .
+
+<http://patrimaths.fr/api/media/1261> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1075> ;
+    ns1:source "3 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5839349t.pdf" .
+
+<http://patrimaths.fr/api/media/1262> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1076> ;
+    ns1:source "4 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5839385p.pdf" .
+
+<http://patrimaths.fr/api/media/1263> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1077> ;
+    ns1:source "5 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5838654v.pdf" .
+
+<http://patrimaths.fr/api/media/1264> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1078> ;
+    ns1:source "6 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5838628c.pdf" .
+
+<http://patrimaths.fr/api/media/1265> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1079> ;
+    ns1:source "7 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k5839374w.pdf" .
+
+<http://patrimaths.fr/api/media/1266> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1080> ;
+    ns1:source "8 Encyclopédie_méthodique_Arts_et_métiers_[...]Lacombe_Jacques_bpt6k58393759.pdf" .
+
+<http://patrimaths.fr/api/media/1267> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1207> ;
+    ns1:source "1_Nouveau_dictionnaire_universel_historiqu.pdf" .
+
+<http://patrimaths.fr/api/media/1268> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1208> ;
+    ns1:source "2_Nouveau_dictionnaire_universel_historiqu.pdf" .
+
+<http://patrimaths.fr/api/media/1269> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1065> ;
+    ns1:source "1 Encyclopédie_générale_renfermant_les_connaissances_[...]Bourgoin_J_bpt6k34110716.pdf" .
+
+<http://patrimaths.fr/api/media/1270> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1066> ;
+    ns1:source "2 Encyclopédie_générale_renfermant_les_connaissances_[...]Bourgoin_J_bpt6k34110731.pdf" .
+
+<http://patrimaths.fr/api/media/1271> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/992> ;
+    ns1:source "5 Dictionnaire_universel_françois_et_latin_[...]_bpt6k50966d.pdf" .
+
+<http://patrimaths.fr/api/media/1272> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/989> ;
+    ns1:source "2 Dictionnaire_universel_françois_et_latin_[...]_bpt6k509819.pdf" .
+
+<http://patrimaths.fr/api/media/1273> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/990> ;
+    ns1:source "3 Dictionnaire_universel_françois_et_latin_[...]_bpt6k50982n.pdf" .
+
+<http://patrimaths.fr/api/media/1274> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/991> ;
+    ns1:source "4 Dictionnaire_universel_françois_et_latin_[...]_bpt6k509830.pdf" .
+
+<http://patrimaths.fr/api/media/1275> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/993> ;
+    ns1:source "6 Dictionnaire_universel_françois_et_latin_[...]_bpt6k50985p.pdf" .
+
+<http://patrimaths.fr/api/media/1276> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/994> ;
+    ns1:source "7 Dictionnaire_universel_françois_et_latin_[...]_bpt6k509861.pdf" .
+
+<http://patrimaths.fr/api/media/1278> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1277> ;
+    ns1:source "8 Dictionnaire_universel_françois_et_latin_[...]_bpt6k50987c.pdf" .
+
+<http://patrimaths.fr/api/media/1279> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1072> ;
+    ns1:source "Dictionnaire_encyclopédique_des_sciences___[...]Desplats_Victor_bpt6k3410864h.pdf" .
+
+<http://patrimaths.fr/api/media/1280> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1116> ;
+    ns1:source "1 Dictionnaire_encyclopédique_usuel_Tome_1_[...]Lavergne_Léonce_bpt6k5859302z.pdf" .
+
+<http://patrimaths.fr/api/media/1281> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1117> ;
+    ns1:source "2 Dictionnaire_encyclopédique_usuel_Tome_2_[...]Lavergne_Léonce_bpt6k5859850r.pdf" .
+
+<http://patrimaths.fr/api/media/1282> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1118> ;
+    ns1:source "1 Dictionnaire_général_des_sciences_théoriques_[...]Privat-Deschanel_Augustin_bpt6k29873z.pdf" .
+
+<http://patrimaths.fr/api/media/1283> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1119> ;
+    ns1:source "2 Dictionnaire_général_des_sciences_théoriques_[...]Privat-Deschanel_Augustin_bpt6k298749.pdf" .
+
+<http://patrimaths.fr/api/media/1284> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1070> ;
+    ns1:source "1 Dictionnaire_français_illustré_et_encyclopédie_[...]Dupiney_de_bpt6k58300423.pdf" .
+
+<http://patrimaths.fr/api/media/1285> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1071> ;
+    ns1:source "2 Dictionnaire_français_illustré_et_encyclopédie_[...]Dupiney_de_bpt6k58175678.pdf" .
+
+<http://patrimaths.fr/api/media/1286> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1120> ;
+    ns1:source "1 Dictionnaire_universel_d'idées_par_Ernst_[...]Ernst_(02)_bpt6k58139415.pdf" .
+
+<http://patrimaths.fr/api/media/1287> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1121> ;
+    ns1:source "2 Dictionnaire_universel_d'idées_par_Ernst_[...]Ernst_(02)_bpt6k5813930c.pdf" .
+
+<http://patrimaths.fr/api/media/1288> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1122> ;
+    ns1:source "3 Dictionnaire_universel_d'idées_par_Ernst_[...]Ernst_(02)_bpt6k5817077x.pdf" .
+
+<http://patrimaths.fr/api/media/1289> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1043> ;
+    ns1:source "1 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6274636j.pdf" .
+
+<http://patrimaths.fr/api/media/1290> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1044> ;
+    ns1:source "2 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6275749t.pdf" .
+
+<http://patrimaths.fr/api/media/1291> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1045> ;
+    ns1:source "3 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6281954v.pdf" .
+
+<http://patrimaths.fr/api/media/1292> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1046> ;
+    ns1:source "4 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63190927.pdf" .
+
+<http://patrimaths.fr/api/media/1293> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1047> ;
+    ns1:source "5 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63083436.pdf" .
+
+<http://patrimaths.fr/api/media/1294> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1048> ;
+    ns1:source "6 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63458485.pdf" .
+
+<http://patrimaths.fr/api/media/1295> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1049> ;
+    ns1:source "7 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63033190.pdf" .
+
+<http://patrimaths.fr/api/media/1296> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1050> ;
+    ns1:source "8 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6306768s.pdf" .
+
+<http://patrimaths.fr/api/media/1297> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1051> ;
+    ns1:source "9 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63410077.pdf" .
+
+<http://patrimaths.fr/api/media/1298> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1052> ;
+    ns1:source "10 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6306759t.pdf" .
+
+<http://patrimaths.fr/api/media/1299> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1053> ;
+    ns1:source "11 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6303318k.pdf" .
+
+<http://patrimaths.fr/api/media/1300> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1054> ;
+    ns1:source "12 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63033264.pdf" .
+
+<http://patrimaths.fr/api/media/1301> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1055> ;
+    ns1:source "13 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6306758d.pdf" .
+
+<http://patrimaths.fr/api/media/1302> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1056> ;
+    ns1:source "14 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6341015s.pdf" .
+
+<http://patrimaths.fr/api/media/1303> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1057> ;
+    ns1:source "15 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6341008n.pdf" .
+
+<http://patrimaths.fr/api/media/1304> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1058> ;
+    ns1:source "16 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6303325q.pdf" .
+
+<http://patrimaths.fr/api/media/1305> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1059> ;
+    ns1:source "17 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63410166.pdf" .
+
+<http://patrimaths.fr/api/media/1306> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1060> ;
+    ns1:source "18 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k63040873.pdf" .
+
+<http://patrimaths.fr/api/media/1307> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1061> ;
+    ns1:source "19 Encyclopédie_des_connaissances_utiles_Tome_[...]_bpt6k6587523h.pdf" .
+
+<http://patrimaths.fr/api/media/1308> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1123> ;
+    ns1:source "1 Encyclopédie_du_commerçant_Dictionnaire_du_[...]_bpt6k6346318m.pdf" .
+
+<http://patrimaths.fr/api/media/1309> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1124> ;
+    ns1:source "2 Encyclopédie_du_commerçant_Dictionnaire_du_[...]_bpt6k6209218v.pdf" .
+
+<http://patrimaths.fr/api/media/1310> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1067> ;
+    ns1:source "1 Encyclopédie_générale_Tome_1___[...]_bpt6k6259904m.pdf" .
+
+<http://patrimaths.fr/api/media/1311> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1068> ;
+    ns1:source "2 Encyclopédie_générale_Tome_2___[...]_bpt6k6253045k.pdf" .
+
+<http://patrimaths.fr/api/media/1312> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1069> ;
+    ns1:source "3 Encyclopédie_générale_Tome_3___[...]_bpt6k6257467s.pdf" .
+
+<http://patrimaths.fr/api/media/1339> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1313> ;
+    ns1:source "1.pdf" .
+
+<http://patrimaths.fr/api/media/1340> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1314> ;
+    ns1:source "2.pdf" .
+
+<http://patrimaths.fr/api/media/1341> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1315> ;
+    ns1:source "3.pdf" .
+
+<http://patrimaths.fr/api/media/1342> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1316> ;
+    ns1:source "4.pdf" .
+
+<http://patrimaths.fr/api/media/1343> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1317> ;
+    ns1:source "5.pdf" .
+
+<http://patrimaths.fr/api/media/1344> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1318> ;
+    ns1:source "6.pdf" .
+
+<http://patrimaths.fr/api/media/1345> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1319> ;
+    ns1:source "7.pdf" .
+
+<http://patrimaths.fr/api/media/1346> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1320> ;
+    ns1:source "8.pdf" .
+
+<http://patrimaths.fr/api/media/1347> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1323> ;
+    ns1:source "11.pdf" .
+
+<http://patrimaths.fr/api/media/1348> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1324> ;
+    ns1:source "12.pdf" .
+
+<http://patrimaths.fr/api/media/1349> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1325> ;
+    ns1:source "13.pdf" .
+
+<http://patrimaths.fr/api/media/1350> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1326> ;
+    ns1:source "14.pdf" .
+
+<http://patrimaths.fr/api/media/1351> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1327> ;
+    ns1:source "15.pdf" .
+
+<http://patrimaths.fr/api/media/1352> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1328> ;
+    ns1:source "16.pdf" .
+
+<http://patrimaths.fr/api/media/1353> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1329> ;
+    ns1:source "17.pdf" .
+
+<http://patrimaths.fr/api/media/1354> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1330> ;
+    ns1:source "18.pdf" .
+
+<http://patrimaths.fr/api/media/1355> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1331> ;
+    ns1:source "19.pdf" .
+
+<http://patrimaths.fr/api/media/1356> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1332> ;
+    ns1:source "20.pdf" .
+
+<http://patrimaths.fr/api/media/1357> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1333> ;
+    ns1:source "21.pdf" .
+
+<http://patrimaths.fr/api/media/1358> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1334> ;
+    ns1:source "22.pdf" .
+
+<http://patrimaths.fr/api/media/1359> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1335> ;
+    ns1:source "23.pdf" .
+
+<http://patrimaths.fr/api/media/1369> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1364> ;
+    ns1:source "5-7 Encyclopédie_nouvelle_5-7___publ_[...]_bpt6k6574k.pdf" .
+
+<http://patrimaths.fr/api/media/1389> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1176> ;
+    ns1:source "1 La_grande_encyclopédie___inventaire_[...]_bpt6k246360.pdf" .
+
+<http://patrimaths.fr/api/media/1390> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1177> ;
+    ns1:source "2 La_grande_encyclopédie___inventaire_[...]_bpt6k24637b.pdf" .
+
+<http://patrimaths.fr/api/media/1391> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1178> ;
+    ns1:source "3 La_grande_encyclopédie___inventaire_[...]_bpt6k24638p.pdf" .
+
+<http://patrimaths.fr/api/media/1392> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1179> ;
+    ns1:source "4 La_grande_encyclopédie___inventaire_[...]_bpt6k246391.pdf" .
+
+<http://patrimaths.fr/api/media/1393> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1180> ;
+    ns1:source "5 La_grande_encyclopédie___inventaire_[...]_bpt6k246407.pdf" .
+
+<http://patrimaths.fr/api/media/1394> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1181> ;
+    ns1:source "6 La_grande_encyclopédie___inventaire_[...]_bpt6k24641k.pdf" .
+
+<http://patrimaths.fr/api/media/1395> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1182> ;
+    ns1:source "7 La_grande_encyclopédie___inventaire_[...]_bpt6k24642x.pdf" .
+
+<http://patrimaths.fr/api/media/1396> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1183> ;
+    ns1:source "8 La_grande_encyclopédie___inventaire_[...]_bpt6k246438.pdf" .
+
+<http://patrimaths.fr/api/media/1397> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1184> ;
+    ns1:source "9 La_grande_encyclopédie___inventaire_[...]_bpt6k24644m.pdf" .
+
+<http://patrimaths.fr/api/media/1398> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1185> ;
+    ns1:source "10 La_grande_encyclopédie___inventaire_[...]_bpt6k24645z.pdf" .
+
+<http://patrimaths.fr/api/media/1399> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1186> ;
+    ns1:source "11 La_grande_encyclopédie___inventaire_[...]_bpt6k246469.pdf" .
+
+<http://patrimaths.fr/api/media/1400> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1187> ;
+    ns1:source "12 La_grande_encyclopédie___inventaire_[...]_bpt6k24647n.pdf" .
+
+<http://patrimaths.fr/api/media/1401> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1188> ;
+    ns1:source "13 La_grande_encyclopédie___inventaire_[...]_bpt6k246480.pdf" .
+
+<http://patrimaths.fr/api/media/1402> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1189> ;
+    ns1:source "14 La_grande_encyclopédie___inventaire_[...]_bpt6k24649b.pdf" .
+
+<http://patrimaths.fr/api/media/1403> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1190> ;
+    ns1:source "15 La_grande_encyclopédie___inventaire_[...]_bpt6k24650j.pdf" .
+
+<http://patrimaths.fr/api/media/1404> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1191> ;
+    ns1:source "16 La_grande_encyclopédie___inventaire_[...]_bpt6k24651w.pdf" .
+
+<http://patrimaths.fr/api/media/1405> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1192> ;
+    ns1:source "17 La_grande_encyclopédie___inventaire_[...]_bpt6k246527.pdf" .
+
+<http://patrimaths.fr/api/media/1406> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1193> ;
+    ns1:source "18 La_grande_encyclopédie___inventaire_[...]_bpt6k24653k.pdf" .
+
+<http://patrimaths.fr/api/media/1407> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1194> ;
+    ns1:source "19 La_grande_encyclopédie___inventaire_[...]_bpt6k24654x.pdf" .
+
+<http://patrimaths.fr/api/media/1408> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1195> ;
+    ns1:source "20 La_grande_encyclopédie___inventaire_[...]_bpt6k246558.pdf" .
+
+<http://patrimaths.fr/api/media/1409> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1196> ;
+    ns1:source "21 La_grande_encyclopédie___inventaire_[...]_bpt6k24656m.pdf" .
+
+<http://patrimaths.fr/api/media/1410> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1197> ;
+    ns1:source "22 La_grande_encyclopédie___inventaire_[...]_bpt6k24657z.pdf" .
+
+<http://patrimaths.fr/api/media/1411> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1198> ;
+    ns1:source "23 La_grande_encyclopédie___inventaire_[...]_bpt6k246589.pdf" .
+
+<http://patrimaths.fr/api/media/1412> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1199> ;
+    ns1:source "24 La_grande_encyclopédie___inventaire_[...]_bpt6k24659n.pdf" .
+
+<http://patrimaths.fr/api/media/1413> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1200> ;
+    ns1:source "25 La_grande_encyclopédie___inventaire_[...]_bpt6k24660v.pdf" .
+
+<http://patrimaths.fr/api/media/1414> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1201> ;
+    ns1:source "26 La_grande_encyclopédie___inventaire_[...]_bpt6k246616.pdf" .
+
+<http://patrimaths.fr/api/media/1415> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1202> ;
+    ns1:source "27 La_grande_encyclopédie___inventaire_[...]_bpt6k24662j.pdf" .
+
+<http://patrimaths.fr/api/media/1416> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1203> ;
+    ns1:source "28 La_grande_encyclopédie___inventaire_[...]_bpt6k24663w.pdf" .
+
+<http://patrimaths.fr/api/media/1417> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1204> ;
+    ns1:source "29 La_grande_encyclopédie___inventaire_[...]_bpt6k246647.pdf" .
+
+<http://patrimaths.fr/api/media/1418> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1205> ;
+    ns1:source "30 La_grande_encyclopédie___inventaire_[...]_bpt6k24665k.pdf" .
+
+<http://patrimaths.fr/api/media/1419> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1206> ;
+    ns1:source "31 La_grande_encyclopédie___inventaire_[...]_bpt6k24666x.pdf" .
+
+<http://patrimaths.fr/api/media/1450> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1447> ;
+    ns1:source "S1 TheSupplementToPennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume01_text.pdf" .
+
+<http://patrimaths.fr/api/media/1451> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1448> ;
+    ns1:source "S2 TheSecondSupplementToPennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledge_text.pdf" .
+
+<http://patrimaths.fr/api/media/1452> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1449> ;
+    ns1:source "S3 TheSupplementToPennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume02_text.pdf" .
+
+<http://patrimaths.fr/api/media/1453> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1420> ;
+    ns1:source "1 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume01A-Andes_text.pdf" .
+
+<http://patrimaths.fr/api/media/1454> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1421> ;
+    ns1:source "2 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume02Andocides-Athanagilde_text.pdf" .
+
+<http://patrimaths.fr/api/media/1455> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1422> ;
+    ns1:source "3 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume03Athanaric-Bassano_text.pdf" .
+
+<http://patrimaths.fr/api/media/1456> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1423> ;
+    ns1:source "4 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume04Bassantin-Bloemaart.pdf" .
+
+<http://patrimaths.fr/api/media/1457> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1424> ;
+    ns1:source "5 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume05Blois-Buffalo_text.pdf" .
+
+<http://patrimaths.fr/api/media/1458> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1425> ;
+    ns1:source "6 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume06Buffon-CharlessWain_text.pdf" .
+
+<http://patrimaths.fr/api/media/1459> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1426> ;
+    ns1:source "7 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume07Charleston-Copyhold_text.pdf" .
+
+<http://patrimaths.fr/api/media/1460> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1427> ;
+    ns1:source "8 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume08Copyright-Dionysius_text.pdf" .
+
+<http://patrimaths.fr/api/media/1461> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1428> ;
+    ns1:source "9 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume09Dionysius-Erne_text.pdf" .
+
+<http://patrimaths.fr/api/media/1462> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1429> ;
+    ns1:source "10 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume10Ernesti-Frustum_text.pdf" .
+
+<http://patrimaths.fr/api/media/1463> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1430> ;
+    ns1:source "11 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume11FuegoTierraDel-Haddingtonshire_text.pdf" .
+
+<http://patrimaths.fr/api/media/1464> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1431> ;
+    ns1:source "12 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume12HadleyJohn-Intestina_text.pdf" .
+
+<http://patrimaths.fr/api/media/1465> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1432> ;
+    ns1:source "13 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume13Intestines-Limoges_text.pdf" .
+
+<http://patrimaths.fr/api/media/1466> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1433> ;
+    ns1:source "14 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume14Limonia-Massachusetts_text.pdf" .
+
+<http://patrimaths.fr/api/media/1467> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1434> ;
+    ns1:source "15 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume15Massagetae-Muridae_text.pdf" .
+
+<http://patrimaths.fr/api/media/1468> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1435> ;
+    ns1:source "16 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume16Murillo-Organ_text.pdf" .
+
+<http://patrimaths.fr/api/media/1469> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1437> ;
+    ns1:source "18 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume18Peru-Primates_text.pdf" .
+
+<http://patrimaths.fr/api/media/1470> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1436> ;
+    ns1:source "17.pdf" .
+
+<http://patrimaths.fr/api/media/1471> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1438> ;
+    ns1:source "19 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume19Primaticcio-Richardson_text.pdf" .
+
+<http://patrimaths.fr/api/media/1472> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1439> ;
+    ns1:source "20 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume20Richardson-Scander-beg_text.pdf" .
+
+<http://patrimaths.fr/api/media/1473> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1440> ;
+    ns1:source "21 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume21Scanderoon-Signet_text.pdf" .
+
+<http://patrimaths.fr/api/media/1474> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1441> ;
+    ns1:source "22 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume22Sigonio-Steam-vessel_text.pdf" .
+
+<http://patrimaths.fr/api/media/1475> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1442> ;
+    ns1:source "23 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume23StearicAcid-Tagus_text.pdf" .
+
+<http://patrimaths.fr/api/media/1476> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1443> ;
+    ns1:source "24 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume24Tai-wan-Titlarks_text.pdf" .
+
+<http://patrimaths.fr/api/media/1477> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1444> ;
+    ns1:source "25 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume25TitlesOfHonour-Ungula_text.pdf" .
+
+<http://patrimaths.fr/api/media/1478> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1445> ;
+    ns1:source "26 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume26Ungulata-Wales_text.pdf" .
+
+<http://patrimaths.fr/api/media/1479> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1446> ;
+    ns1:source "27 ThePennyCyclopaediaOfTheSocietyForTheDiffusionOfUsefulKnowledgeVolume27Wales-Zygophyllaceae_text.pdf" .
+
+<http://patrimaths.fr/api/media/1480> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1027> ;
+    ns1:source "1 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k58136006.pdf" .
+
+<http://patrimaths.fr/api/media/1481> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1028> ;
+    ns1:source "2 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k58130946.pdf" .
+
+<http://patrimaths.fr/api/media/1482> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1029> ;
+    ns1:source "3 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k58141335.pdf" .
+
+<http://patrimaths.fr/api/media/1483> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1030> ;
+    ns1:source "4 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k5813604v.pdf" .
+
+<http://patrimaths.fr/api/media/1484> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1031> ;
+    ns1:source "5 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k58136021.pdf" .
+
+<http://patrimaths.fr/api/media/1485> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1032> ;
+    ns1:source "6 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k5813606p.pdf" .
+
+<http://patrimaths.fr/api/media/1486> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1033> ;
+    ns1:source "7 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k5813601m.pdf" .
+
+<http://patrimaths.fr/api/media/1487> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1034> ;
+    ns1:source "8 Dictionnaire_universel_des_connaissances_humaines_[...]_bpt6k5813598k.pdf" .
+
+<http://patrimaths.fr/api/media/1491> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/966> ;
+    ns1:source "14.pdf" .
+
+<http://patrimaths.fr/api/media/1492> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/968> ;
+    ns1:source "16.pdf" .
+
+<http://patrimaths.fr/api/media/1519> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1093> ;
+    ns1:source "4 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k375746.pdf" .
+
+<http://patrimaths.fr/api/media/1520> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/956> ;
+    ns1:source "4.pdf" .
+
+<http://patrimaths.fr/api/media/1551> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1091> ;
+    ns1:source "2 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37572h.pdf" .
+
+<http://patrimaths.fr/api/media/1552> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1094> ;
+    ns1:source "5 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37575j.pdf" .
+
+<http://patrimaths.fr/api/media/1553> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1096> ;
+    ns1:source "7 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k375777.pdf" .
+
+<http://patrimaths.fr/api/media/1554> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1098> ;
+    ns1:source "9 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37579x.pdf" .
+
+<http://patrimaths.fr/api/media/1555> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1100> ;
+    ns1:source "11 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37581g.pdf" .
+
+<http://patrimaths.fr/api/media/1556> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1102> ;
+    ns1:source "13 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k375835.pdf" .
+
+<http://patrimaths.fr/api/media/1557> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1103> ;
+    ns1:source "14 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37584h.pdf" .
+
+<http://patrimaths.fr/api/media/1558> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1104> ;
+    ns1:source "15 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37585v.pdf" .
+
+<http://patrimaths.fr/api/media/1559> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1105> ;
+    ns1:source "16 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k375866.pdf" .
+
+<http://patrimaths.fr/api/media/1560> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1107> ;
+    ns1:source "18 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37588w.pdf" .
+
+<http://patrimaths.fr/api/media/1561> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1108> ;
+    ns1:source "19 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k375897.pdf" .
+
+<http://patrimaths.fr/api/media/1562> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1110> ;
+    ns1:source "21 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37591s.pdf" .
+
+<http://patrimaths.fr/api/media/1563> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1115> ;
+    ns1:source "26 Encyclopédie_du_dix-neuvième_siècle___[...]_bpt6k37596h.pdf" .
+
+<http://patrimaths.fr/api/media/1565> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1564> ;
+    ns1:source "Table Méthodique Encyclopedie_du_dix_neuvieme_siecle_repe.pdf" .
+
+<http://patrimaths.fr/api/media/1567> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/979> ;
+    ns1:source "Planche 10.pdf" .
+
+<http://patrimaths.fr/api/media/1569> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1568> ;
+    ns1:source "Planche 11.pdf" .
+
+<http://patrimaths.fr/api/media/1570> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1515> ;
+    ns1:source "194225118.23.pdf" .
+
+<http://patrimaths.fr/api/media/1575> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1574> ;
+    ns1:source "Lexicon_Technicum_Or_An_Universal_Englis.pdf" .
+
+<http://patrimaths.fr/api/media/1580> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1579> ;
+    ns1:source "2 Cyclopaedia_Or_an_Universal_Dictionary_o.pdf" .
+
+<http://patrimaths.fr/api/media/1583> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1582> ;
+    ns1:source "1 Dictionnaire_de_pédagogie_et_d'instruction_[...]_bpt6k24232h.pdf" .
+
+<http://patrimaths.fr/api/media/1585> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1584> ;
+    ns1:source "2 Dictionnaire_de_pédagogie_et_d'instruction_[...]_bpt6k24233v.pdf" .
+
+<http://patrimaths.fr/api/media/1587> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1586> ;
+    ns1:source "1. Dictionnaire_de_pédagogie_et_d'instruction_[...]_bpt6k24239x.pdf" .
+
+<http://patrimaths.fr/api/media/1589> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1588> ;
+    ns1:source "2. Dictionnaire_de_pédagogie_et_d'instruction_[...]_bpt6k242404.pdf" .
+
+<http://patrimaths.fr/api/media/1683> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1639> ;
+    ns1:source "1.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215524r.pdf" .
+
+<http://patrimaths.fr/api/media/1684> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1640> ;
+    ns1:source "1.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155254.pdf" .
+
+<http://patrimaths.fr/api/media/1685> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1641> ;
+    ns1:source "2.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215526h.pdf" .
+
+<http://patrimaths.fr/api/media/1686> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1642> ;
+    ns1:source "2.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215527w.pdf" .
+
+<http://patrimaths.fr/api/media/1687> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1643> ;
+    ns1:source "3.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155288.pdf" .
+
+<http://patrimaths.fr/api/media/1688> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1644> ;
+    ns1:source "3.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215529n.pdf" .
+
+<http://patrimaths.fr/api/media/1689> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1645> ;
+    ns1:source "4.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215530k.pdf" .
+
+<http://patrimaths.fr/api/media/1690> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1646> ;
+    ns1:source "4.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215531z.pdf" .
+
+<http://patrimaths.fr/api/media/1691> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1647> ;
+    ns1:source "5.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215532b.pdf" .
+
+<http://patrimaths.fr/api/media/1692> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1648> ;
+    ns1:source "5.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215533q.pdf" .
+
+<http://patrimaths.fr/api/media/1693> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1649> ;
+    ns1:source "6.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155343.pdf" .
+
+<http://patrimaths.fr/api/media/1694> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1650> ;
+    ns1:source "6.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215535g.pdf" .
+
+<http://patrimaths.fr/api/media/1695> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1651> ;
+    ns1:source "7.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215536v.pdf" .
+
+<http://patrimaths.fr/api/media/1696> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1652> ;
+    ns1:source "7.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155377.pdf" .
+
+<http://patrimaths.fr/api/media/1697> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1653> ;
+    ns1:source "8.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215538m.pdf" .
+
+<http://patrimaths.fr/api/media/1698> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1654> ;
+    ns1:source "8.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155390.pdf" .
+
+<http://patrimaths.fr/api/media/1699> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1655> ;
+    ns1:source "9.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155419.pdf" .
+
+<http://patrimaths.fr/api/media/1700> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1656> ;
+    ns1:source "9.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215540x.pdf" .
+
+<http://patrimaths.fr/api/media/1701> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1657> ;
+    ns1:source "10.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215542p.pdf" .
+
+<http://patrimaths.fr/api/media/1702> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1658> ;
+    ns1:source "10.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155432.pdf" .
+
+<http://patrimaths.fr/api/media/1703> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1659> ;
+    ns1:source "11.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215544f.pdf" .
+
+<http://patrimaths.fr/api/media/1704> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1660> ;
+    ns1:source "11.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215545t.pdf" .
+
+<http://patrimaths.fr/api/media/1705> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1661> ;
+    ns1:source "12.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155466.pdf" .
+
+<http://patrimaths.fr/api/media/1706> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1662> ;
+    ns1:source "12.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215547k.pdf" .
+
+<http://patrimaths.fr/api/media/1707> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1663> ;
+    ns1:source "13.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215548z.pdf" .
+
+<http://patrimaths.fr/api/media/1708> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1669> ;
+    ns1:source "16.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215554s.pdf" .
+
+<http://patrimaths.fr/api/media/1709> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1664> ;
+    ns1:source "13.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215549b.pdf" .
+
+<http://patrimaths.fr/api/media/1710> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1665> ;
+    ns1:source "14.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155508.pdf" .
+
+<http://patrimaths.fr/api/media/1711> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1666> ;
+    ns1:source "14.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215551n.pdf" .
+
+<http://patrimaths.fr/api/media/1712> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1667> ;
+    ns1:source "15.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155521.pdf" .
+
+<http://patrimaths.fr/api/media/1713> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1668> ;
+    ns1:source "15.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215553d.pdf" .
+
+<http://patrimaths.fr/api/media/1714> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1670> ;
+    ns1:source "16.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155555.pdf" .
+
+<http://patrimaths.fr/api/media/1715> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1671> ;
+    ns1:source "17.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215556j.pdf" .
+
+<http://patrimaths.fr/api/media/1716> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1672> ;
+    ns1:source "17.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215557x.pdf" .
+
+<http://patrimaths.fr/api/media/1717> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1673> ;
+    ns1:source "18.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155589.pdf" .
+
+<http://patrimaths.fr/api/media/1718> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1674> ;
+    ns1:source "18.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215559p.pdf" .
+
+<http://patrimaths.fr/api/media/1719> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1675> ;
+    ns1:source "19.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215560m.pdf" .
+
+<http://patrimaths.fr/api/media/1720> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1676> ;
+    ns1:source "19.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155610.pdf" .
+
+<http://patrimaths.fr/api/media/1721> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1677> ;
+    ns1:source "20.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215562c.pdf" .
+
+<http://patrimaths.fr/api/media/1722> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1678> ;
+    ns1:source "20.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215563r.pdf" .
+
+<http://patrimaths.fr/api/media/1723> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1679> ;
+    ns1:source "21.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155644.pdf" .
+
+<http://patrimaths.fr/api/media/1724> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1680> ;
+    ns1:source "21.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k215565h.pdf" .
+
+<http://patrimaths.fr/api/media/1725> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1681> ;
+    ns1:source "22.1 Encyclopédie_des_gens_du_monde_[...]_bpt6k215566w.pdf" .
+
+<http://patrimaths.fr/api/media/1726> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1682> ;
+    ns1:source "22.2 Encyclopédie_des_gens_du_monde_[...]_bpt6k2155678.pdf" .
+
+<http://patrimaths.fr/api/media/1737> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1727> ;
+    ns1:source "1 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1738> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1728> ;
+    ns1:source "2 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1739> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1729> ;
+    ns1:source "3 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1740> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1730> ;
+    ns1:source "4 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1741> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1731> ;
+    ns1:source "5 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1742> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1732> ;
+    ns1:source "6 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1743> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1733> ;
+    ns1:source "7 Dictionnaire_de_conversation_à_l_usage.pdf" .
+
+<http://patrimaths.fr/api/media/1744> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1735> ;
+    ns1:source "9 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1745> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1736> ;
+    ns1:source "10 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1746> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1734> ;
+    ns1:source "8 Dictionnaire_de_conversation_a_l_usage_d.pdf" .
+
+<http://patrimaths.fr/api/media/1747> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1159> ;
+    ns1:source "1 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205356p.pdf" .
+
+<http://patrimaths.fr/api/media/1748> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1160> ;
+    ns1:source "2 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k397898.pdf" .
+
+<http://patrimaths.fr/api/media/1749> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1161> ;
+    ns1:source "3 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k39790g.pdf" .
+
+<http://patrimaths.fr/api/media/1750> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1162> ;
+    ns1:source "4 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k39791t.pdf" .
+
+<http://patrimaths.fr/api/media/1751> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1163> ;
+    ns1:source "5 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k2053572.pdf" .
+
+<http://patrimaths.fr/api/media/1752> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1164> ;
+    ns1:source "6 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205358f.pdf" .
+
+<http://patrimaths.fr/api/media/1753> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1165> ;
+    ns1:source "7 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205359t.pdf" .
+
+<http://patrimaths.fr/api/media/1754> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1166> ;
+    ns1:source "8 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205360r.pdf" .
+
+<http://patrimaths.fr/api/media/1755> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1167> ;
+    ns1:source "9 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k2053614.pdf" .
+
+<http://patrimaths.fr/api/media/1756> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1168> ;
+    ns1:source "10 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205362h.pdf" .
+
+<http://patrimaths.fr/api/media/1757> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1169> ;
+    ns1:source "11 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205363w.pdf" .
+
+<http://patrimaths.fr/api/media/1758> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1170> ;
+    ns1:source "12 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k2053648.pdf" .
+
+<http://patrimaths.fr/api/media/1761> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1171> ;
+    ns1:source "13 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k205365n.pdf" .
+
+<http://patrimaths.fr/api/media/1762> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1172> ;
+    ns1:source "14 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k398019.pdf" .
+
+<http://patrimaths.fr/api/media/1763> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1173> ;
+    ns1:source "15 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k2053661.pdf" .
+
+<http://patrimaths.fr/api/media/1764> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1174> ;
+    ns1:source "16 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k398030.pdf" .
+
+<http://patrimaths.fr/api/media/1765> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1175> ;
+    ns1:source "17 Grand_dictionnaire_universel_du_XIXe_[...]Larousse_Pierre_bpt6k39804b.pdf" .
+
+<http://patrimaths.fr/api/media/1766> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1572> ;
+    ns1:source "1. Lexicon_Technicum_Or_An_Universal_Englis.pdf" .
+
+<http://patrimaths.fr/api/media/1771> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1767> ;
+    ns1:source "2. APY45CFOBJ4N2T85-E-file-b5fba.pdf" .
+
+<http://patrimaths.fr/api/media/1773> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1577> ;
+    ns1:source "A6LZLJBVIAEPVR8B-E-file-65bcb.pdf" .
+
+<http://patrimaths.fr/api/media/1798> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1797> ;
+    ns1:source "Capture d’écran 2023-02-10 à 17.42.09 (1).png" .
+
+<http://patrimaths.fr/api/media/1838> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/1837> ;
+    ns1:source "Gabriel_Cramer_bw2.jpg" .
+
+<http://patrimaths.fr/api/media/850> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/836> ;
+    ns1:source "https://picsum.photos/300/292" .
+
+<http://patrimaths.fr/api/media/855> a ns1:Media ;
+    rdfs:label "test pdf" ;
+    ns1:item <http://patrimaths.fr/api/items/854> ;
+    ns1:source "593270-converted.pdf" .
+
+<http://patrimaths.fr/api/media/856> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/837> ;
+    ns1:source "Modèle OM 2022 idhe.s (1).pdf" .
+
+<http://patrimaths.fr/api/media/858> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/857> ;
+    ns1:source "Modèle OM 2022 idhe.s (1).pdf" .
+
+<http://patrimaths.fr/api/media/860> a ns1:Media ;
+    rdfs:label """Museum Website designs, themes, templates and ... - Dribbblehttps://dribbble.com › tags › museum_website
+Museum Website. Inspirational designs, illustrations, and graphic elements from the world's best designers. Want more inspiration? Browse our search results ...
+
+Museum - Dribbblehttps://dribbble.com › tags › museum
+Discover 4500+ Museum designs on Dribbble. Your resource to discover and connect with ... The Met Museum. Exhibitions animation design minimal ui ux web.
+
+Museums: UX/UI - Pinteresthttps://nl.pinterest.com › bkneppers › museums-ux-ui
+See more ideas about user interface design, mobile app design, ui design ... The Collection Museum website by optimadesign, via Flickr Archeologie, ...
+
+Your UX Belongs in a Museumhttps://uxplanet.org › your-ux-belongs-in-a-museum-4...
+Jun 8, 2018 — for the slide design. A museum is the perfect place to reignite childlike imagination and curiosity. Here in Toronto, there have been many ...
+
+22 Best Museum Website Designs For Inspiration 2022https://colorlib.com › Home › Website Design
+Mar 2, 2022 — Are you building a website for a museum or art gallery and looking for some inspiration? These museum website design examples are exactly ...""" ;
+    ns1:item <http://patrimaths.fr/api/items/859> ;
+    ns1:source "matthew-woinarowicz-sseaq56X4oQ-unsplash.jpg" .
+
+<http://patrimaths.fr/api/media/986> a ns1:Media ;
+    rdfs:label "None" ;
+    ns1:item <http://patrimaths.fr/api/items/985> ;
+    ns1:source "appletonscyclopa01wils.pdf" .
+

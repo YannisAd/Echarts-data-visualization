@@ -1,126 +1,57 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-from streamlit_option_menu import option_menu
-from numerize.numerize import numerize
-
-
-
-df_personne=pd.read_excel("data.xlsx", sheet_name='personne') #, sheet_name='Sheet1'
-
-
-df_personne["prenom_nom"] = df_personne[["nom", "prenom"]].apply(lambda x: ' '.join(x.dropna().astype(str)), axis=1)
-
-df_personne["sexe"] = df_personne["sexe"].str.lower()
-
+from SPARQLWrapper import SPARQLWrapper, JSON
+from query import query_sparql, All_Personne_Query
 
 def Personne():
+    # Appel de la fonction query_sparql avec la requête All_Personne_Query et le nom de la base de données "personne"
+    results = query_sparql(All_Personne_Query, "personne")
 
-        
-    nom=st.sidebar.multiselect(
-        "Prenom et nom",
-        options=df_personne["prenom_nom"].unique(),
-        default=[],
-    )
-    sexe=st.sidebar.multiselect(
-        "Sexe",
-        options=df_personne["sexe"].unique(),
-        default=[],
-    )
-    annee_nee=st.sidebar.multiselect(
-        "Date de naissance",
-        options=df_personne["date_naissance"].unique(),
-        default=[],
-    )
-    lieu_nee=st.sidebar.multiselect(
-        "Lieu de naissance",
-        options=df_personne["lieu_naissance"].unique(),
-        default=[],
-    )
+    # Accéder aux données JSON retournées
+    bindings = results["results"]["bindings"]
 
-    annee_mort=st.sidebar.multiselect(
-        "Date de mort",
-        options=df_personne["date_mort"].unique(),
-        default=[],
-    )
-    lieu_mort=st.sidebar.multiselect(
-        "Lieu de mort",
-        options=df_personne["lieu_mort"].unique(),
-        default=[],
-    )
+    # Créer une liste pour chaque champ
+    nom_complet = [item["nom_complet"]["value"] for item in bindings]
+    prenom = [item["prenom"]["value"] for item in bindings]
+    nom_de_famille = [item["nom_de_famille"]["value"] for item in bindings]
+    sexe = [item["sexe"]["value"] for item in bindings]
+    date_naissance = [item["date_naissance"]["value"] for item in bindings]
+    ville_naissance = [item["ville_naissance"]["value"] for item in bindings]
+    date_mort = [item["date_mort"]["value"] if "date_mort" in item else None for item in bindings]
+    ville_mort = [item["ville_mort"]["value"] if "ville_mort" in item else None for item in bindings]
 
+    # Créer un DataFrame pandas avec les données extraites
+    df_results = pd.DataFrame({
+        "Nom Complet": nom_complet,
+        "Prénom": prenom,
+        "Nom de Famille": nom_de_famille,
+        "Sexe": sexe,
+        "Date de Naissance": date_naissance,
+        "Ville de Naissance": ville_naissance,
+        "Date de Mort": date_mort,
+        "Ville de Mort": ville_mort
+    })
 
+    # Filtrer par colonnes
+    if not df_results.empty:
+        with st.sidebar:
+            filters = {}
+            for col in df_results.columns:
+                if col != "Nom Complet":
+                    filters[col] = st.multiselect(f'{col}:', df_results[col].unique())
 
+        # Appliquer les filtres
+        df_filtered = df_results
+        for col, vals in filters.items():
+            if vals:
+                df_filtered = df_filtered[df_filtered[col].isin(vals)]
 
+        # Afficher le tableau filtré
+        st.dataframe(df_filtered, use_container_width=True)
 
-
-
-    conditions = []
-
-    if nom:
-        conditions.append(f'prenom_nom== @nom')
-    if sexe:
-        conditions.append(f"sexe==@sexe")
-    if annee_nee:
-        conditions.append(f"date_naissance==@annee_nee")
-    if lieu_nee:
-        conditions.append(f"lieu_naissance==@lieu_nee")
-    if annee_mort:
-        conditions.append(f"date_mort==@annee_mort")
-    if lieu_mort:
-        conditions.append(f"lieu_mort==@lieu_mort")
-
-    
-    
-
-    # Utilisez la condition construite pour filtrer le DataFrame
-    if conditions:
-        query = " & ".join(conditions)
-        df_selection = df_personne.query(query)
-    else:
-        # Si rien n'est sélectionné, affichez tout le DataFrame
-        df_selection = df_personne
-
-        
-
-
-
-    if not df_selection.empty:
-
-        total_nbr_lignes = df_selection.shape[0]
-
-        lieu_principal = df_selection['lieu_naissance'].mode().iloc[0]
-
-
-
-
-        total1,total2=st.columns(2,gap='large')
-        with total1:
-            st.info("Nombre de personne",icon="📌")
-            st.metric(label="",value=f"{total_nbr_lignes:,.0f}")
-
-
-
-        with total2:
-            st.info('Lieu de naissance le plus présent',icon="📌")
-            st.text(lieu_principal)
-
-        
-        
-
-        st.markdown("""---""")
-
-
-    if not df_selection.empty: 
-        with st.expander("Filter par collonnes"):
-            showData=st.multiselect('Filter: ',df_selection.columns,default=["nom","prenom","sexe","date_naissance","lieu_naissance","date_mort","lieu_mort"])
-            
-        # Afficher le tableau
-        st.dataframe(df_selection[showData], use_container_width=True)
-        
         # Convertir le DataFrame en CSV avec encodage UTF-8
-        csv_data = df_selection[showData].to_csv().encode('utf-8')
-        
+        csv_data = df_filtered.to_csv(index=False).encode('utf-8')
+
         # Ajouter un bouton de téléchargement en CSV
         st.download_button(
             label="Télécharger en CSV (UTF-8)",
@@ -131,15 +62,12 @@ def Personne():
             mime="text/csv"  # Spécifiez le type MIME du fichier
         )
 
-        if not showData:
-             st.warning("Sélectionnez au moins un champ à afficher.")
-
-        
-
+        if not filters:
+            st.warning("Sélectionnez au moins un champ à filtrer.")
     else:
         st.warning("Aucun élément trouvé avec la sélection actuelle.")
 
-    
-
-#graphs
-
+# Vérifier si le script est exécuté en tant que script principal
+if __name__ == "__main__":
+    # Appel de votre fonction Personne()
+    Personne()

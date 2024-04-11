@@ -1,4 +1,8 @@
 import streamlit as st
+
+st.set_page_config(page_title="Exploration PatriMaths",page_icon="📰",layout="wide")
+
+
 import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
@@ -7,11 +11,12 @@ from page.encyclopedie import Encyclopedie
 from page.ouvrage import Ouvrage
 from page.personne import Personne
 from page.article import Article
+from page.exploration import Exploration
+from query import create_local_DB
 
 #from query import *
 import time
 
-st.set_page_config(page_title="Exploration PatriMaths",page_icon="📰",layout="wide")
 #st.subheader("Exploration des donnée PatriMaths")
 st.markdown("##")
 
@@ -54,9 +59,10 @@ def sideBar():
 
     if selected2=="Exploration":
     #st.subheader(f"Page: {selected}")
-     Article()
+     Exploration()
 
 sideBar()
+create_local_DB()
 
 #theme
 hide_st_style=""" 
@@ -67,6 +73,3 @@ footer {visibility:hidden;}
 header {visibility:hidden;}
 </style>
 """
-
-
-

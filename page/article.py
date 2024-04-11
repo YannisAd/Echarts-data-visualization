@@ -168,44 +168,44 @@ def Article():
     
     
 
-    def display_references_tree(df):
-            # Create a directed graph
-            G = nx.DiGraph()
+    # def display_references_tree(df):
+    #         # Create a directed graph
+    #         G = nx.DiGraph()
 
-            # Add nodes for each article
-            for index, row in df.iterrows():
-                article_name = f"{row['nom']} ({row['encyclopedie']})"
-                G.add_node(article_name)
+    #         # Add nodes for each article
+    #         for index, row in df.iterrows():
+    #             article_name = f"{row['nom']} ({row['encyclopedie']})"
+    #             G.add_node(article_name)
 
-                # Iterate over renvoi columns
-                for i in range(1, 11):
-                    ref_name_col = f"renvoi{i}"
-                    ref_name = row[ref_name_col]
-                    if pd.notnull(ref_name) and ref_name.strip() != '':
-                        ref_id = f"{ref_name} ({row['encyclopedie']})"
-                        G.add_edge(article_name, ref_id)
+    #             # Iterate over renvoi columns
+    #             for i in range(1, 11):
+    #                 ref_name_col = f"renvoi{i}"
+    #                 ref_name = row[ref_name_col]
+    #                 if pd.notnull(ref_name) and ref_name.strip() != '':
+    #                     ref_id = f"{ref_name} ({row['encyclopedie']})"
+    #                     G.add_edge(article_name, ref_id)
 
-            # Calculate betweenness centrality
-            betweenness_centrality = nx.betweenness_centrality(G)
+    #         # Calculate betweenness centrality
+    #         betweenness_centrality = nx.betweenness_centrality(G)
 
-            # Layout the graph for better visibility
-            pos = nx.kamada_kawai_layout(G)  # Change to a different layout
+    #         # Layout the graph for better visibility
+    #         pos = nx.kamada_kawai_layout(G)  # Change to a different layout
 
-            # Get node colors based on betweenness centrality
-            node_colors = [betweenness_centrality[node] for node in G.nodes()]
+    #         # Get node colors based on betweenness centrality
+    #         node_colors = [betweenness_centrality[node] for node in G.nodes()]
 
-            # Use seaborn to create a red color palette
-            red_palette = sns.color_palette("Reds", as_cmap=True)
+    #         # Use seaborn to create a red color palette
+    #         red_palette = sns.color_palette("Reds", as_cmap=True)
 
-            # Display the graph
-            plt.figure(figsize=(16, 12))  # Adjust figure size
-            nx.draw(G, pos, with_labels=True, font_size=7, font_color='black', node_size=1000, node_color=node_colors, cmap=red_palette, edge_color='black', linewidths=2, alpha=0.85)
+    #         # Display the graph
+    #         plt.figure(figsize=(16, 12))  # Adjust figure size
+    #         nx.draw(G, pos, with_labels=True, font_size=7, font_color='black', node_size=1000, node_color=node_colors, cmap=red_palette, edge_color='black', linewidths=2, alpha=0.85)
 
-            # Add a legend for node color
-            plt.axis('off')  # Disable axes
-            plt.margins(0.2, 0.2)  # Add margins
-            plt.gca().autoscale(tight=True)  # Automatically scale
-            st.pyplot(plt.gcf())  # Use st.pyplot to display the graph in Streamlit
+    #         # Add a legend for node color
+    #         plt.axis('off')  # Disable axes
+    #         plt.margins(0.2, 0.2)  # Add margins
+    #         plt.gca().autoscale(tight=True)  # Automatically scale
+    #         st.pyplot(plt.gcf())  # Use st.pyplot to display the graph in Streamlit
 
 
 
@@ -216,9 +216,9 @@ def Article():
 
 
 
-    if not df_selection.empty:
-        with st.expander("Afficher l'arborescence des renvois"):
-            display_references_tree(df_selection)
+    # if not df_selection.empty:
+    #     with st.expander("Afficher l'arborescence des renvois"):
+    #         display_references_tree(df_selection)
 
 
    # Ajout d'un tableau avec les colonnes spécifiées
