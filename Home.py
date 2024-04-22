@@ -2,17 +2,17 @@ import streamlit as st
 
 st.set_page_config(page_title="Exploration PatriMaths",page_icon="📰",layout="wide")
 
-
 import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 from numerize.numerize import numerize
-from page.encyclopedie import Encyclopedie
-from page.ouvrage import Ouvrage
+# from page.encyclopedie import Encyclopedie
+# from page.ouvrage import Ouvrage
 from page.personne import Personne
-from page.article import Article
+# from page.article import Article
 from page.exploration import Exploration
-from query import create_local_DB
+from page.graph import graph
+from query import create_local_DB, parse_renvoi_json
 
 #from query import *
 import time
@@ -38,20 +38,20 @@ st.sidebar.header("Selectionez vos filtres")
 def sideBar():
 
     selected2 = option_menu(None, ["Article", "Encyclopedie", "Ouvrage", 'Personne', 'Exploration'], 
-    icons=['house', 'book', "list-task", 'neutal-face', 'map'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
+    icons=['house', 'book', "list-task", 'cat', 'map'], 
+    menu_icon="cast", default_index=0, orientation="horizontal", key='acceuil')
     selected2
     if selected2=="Article":
     #st.subheader(f"Page: {selected}")
-     Article()
+     graph()
     
     if selected2=="Encyclopedie":
     #st.subheader(f"Page: {selected}")
-     Encyclopedie()
+     graph()
 
     if selected2=="Ouvrage":
     #st.subheader(f"Page: {selected}")
-     Ouvrage()
+     graph()
 
     if selected2=="Personne":
     #st.subheader(f"Page: {selected}")
@@ -61,8 +61,12 @@ def sideBar():
     #st.subheader(f"Page: {selected}")
      Exploration()
 
-sideBar()
+
 create_local_DB()
+
+sideBar()
+
+parse_renvoi_json()
 
 #theme
 hide_st_style=""" 
@@ -73,3 +77,4 @@ footer {visibility:hidden;}
 header {visibility:hidden;}
 </style>
 """
+

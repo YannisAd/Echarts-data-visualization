@@ -1,7 +1,7 @@
 
 # If you use SPARQL Endpoint (in this case we use Apache Fuseki) 
 
-SPARQL_ENDPOINT_ACCESS = ""
+SPARQL_ENDPOINT_ACCESS = "http://testyannis.henripoincare.fr/PatriMaths_encyclopedie/"
 SPARQL_ID = ""
 SPARQL_PASSWORD = ""
 
@@ -15,7 +15,9 @@ DB_NAME = ""
 
 
 # Chemin du dossier de sauvegarde
-DB_folder = "./ressources"
+DB_folder = "./ressources/json_db/"
+
+Plots_folder = "./ressources/graph_and_plot"
 
 
 # If you use simple CSV file or excel 
