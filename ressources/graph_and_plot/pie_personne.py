@@ -1,7 +1,7 @@
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar, Pie
 from pyecharts import options as opts
-from query import get_most_cited_people_by_encyclopedia
+from Query import get_most_cited_people_by_encyclopedia
 
 def display_most_cited_people_chart():
     pie_data = []

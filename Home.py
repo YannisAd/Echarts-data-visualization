@@ -6,13 +6,13 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 from numerize.numerize import numerize
-# from page.encyclopedie import Encyclopedie
+from page.encyclopedie import Encyclopedie
 # from page.ouvrage import Ouvrage
 from page.personne import Personne
-# from page.article import Article
+from page.article import Article
 from page.exploration import Exploration
 from page.graph import graph
-from query import create_local_DB, parse_renvoi_json
+from Query import create_local_DB, parse_renvoi_json
 
 #from query import *
 import time
@@ -37,27 +37,27 @@ st.sidebar.header("Selectionez vos filtres")
 
 def sideBar():
 
-    selected2 = option_menu(None, ["Article", "Encyclopedie", "Ouvrage", 'Personne', 'Exploration'], 
-    icons=['house', 'book', "list-task", 'cat', 'map'], 
+    selected = option_menu(None, ["Article", "Encyclopedie", "Ouvrage", 'Personne', 'Exploration'], 
+    icons=['house', 'book', "list-task", '', 'map'], 
     menu_icon="cast", default_index=0, orientation="horizontal", key='acceuil')
-    selected2
-    if selected2=="Article":
-    #st.subheader(f"Page: {selected}")
-     graph()
     
-    if selected2=="Encyclopedie":
+    if selected=="Article":
+    #st.subheader(f"Page: {selected}")
+     Article()
+    
+    if selected=="Encyclopedie":
+    #st.subheader(f"Page: {selected}")
+     Encyclopedie()
+
+    if selected=="Ouvrage":
     #st.subheader(f"Page: {selected}")
      graph()
 
-    if selected2=="Ouvrage":
-    #st.subheader(f"Page: {selected}")
-     graph()
-
-    if selected2=="Personne":
+    if selected=="Personne":
     #st.subheader(f"Page: {selected}")
      Personne()
 
-    if selected2=="Exploration":
+    if selected=="Exploration":
     #st.subheader(f"Page: {selected}")
      Exploration()
 

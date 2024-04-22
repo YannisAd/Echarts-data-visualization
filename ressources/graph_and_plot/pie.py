@@ -1,8 +1,7 @@
-from query import count_articles_with_attributes
+from Query import count_articles_with_attributes
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from streamlit_echarts import st_pyecharts
-from query import count_articles_with_attributes
 
 pie_counter = 0
 

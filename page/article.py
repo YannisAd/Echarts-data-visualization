@@ -1,324 +1,139 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-from streamlit_option_menu import option_menu
-from numerize.numerize import numerize
-import networkx as nx
-import matplotlib.pyplot as plt
-import seaborn as sns
+import json
+from st_keyup import st_keyup
+from Constants import DB_folder
 
-
-
-
-
-
-df_article=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
-
-df_article_renvoi=pd.read_excel("data.xlsx", sheet_name='articles') #, sheet_name='Sheet1'
-
-
-df_article["theme"] = df_article[["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
-
-df_article["renvoi"] = df_article[["renvoi1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "renvoi10"]].apply(lambda x: ' , '.join(x.dropna().astype(str)), axis=1)
-
-
-
+# Requête SPARQL pour récupérer tous les articles avec leurs informations
 def Article():
+    # Appel de la fonction query_sparql avec la requête All_Article_Query
+    with open(DB_folder+'/complete_article.json', "r") as f:
+        results = json.load(f)
 
+    # Accéder aux données JSON retournées
+    bindings = results["results"]["bindings"]
 
-    
-    
-    titre=st.sidebar.multiselect(
-        "Nom de l'article",
-        options=df_article["nom"].unique(),
-        default=[],
-    )
-    
-    signataire=st.sidebar.multiselect(
-        "Signataire", 
-        options=df_article["signataire"].unique(),
-        default=[],
-    )
-    encyclopedie=st.sidebar.multiselect(
-        "Encyclopedie",
-        options=df_article["encyclopedie"].unique(),
-        default=[],
-    )
-    volume=st.sidebar.multiselect(
-        "Volume",
-        options=df_article["volume"].unique(),
-        default=[],
-    )
-    theme=st.sidebar.multiselect(
-        "Thème",
-        options=df_article["theme1"].unique(),
-        default=[],
-    )
-    renvoi=st.sidebar.multiselect(
-        "Renvoi",
-        options=df_article["renvoi1"].unique(),
-        default=[],
-    )
+    # Créer une liste pour chaque champ
+    article = []
+    encyclopedie = []
+    volume = []
+    titre = []
+    nbr_colonne = []
+    complement_titre = []
+    num_page_debut = []
+    num_page_fin = []
+    signataire = []
+    themes = []
+    ref_histoire = []
+    revue_citee = []
+    personne_citee = []
+    renvoi_article = []
+    ouvrage_citee = []
 
-    col_math=st.sidebar.multiselect(
-        "Nombre de colonne mathématique",
-        options=df_article["nbr_colonnes_math"].unique(),
-        default=[],
-    )
-
-    
-
-
-
-    conditions = []
-
-    if signataire:
-        conditions.append(f"signataire==@signataire")
-    if encyclopedie:
-        conditions.append(f"encyclopedie==@encyclopedie")
-    if volume:
-        conditions.append(f"volume==@volume")
-    if theme:
-        conditions.append(f"theme==@theme" or "theme2==@theme"or "theme3==@theme" or "theme4==@theme" or "theme5==@theme" or "theme6==@theme")
-    if renvoi:
-        conditions.append(f"renvoi==@renvoi" or "renvoi2==@renvoi"or "renvoi3==@renvoi" or "renvoi4==@renvoi" or "renvoi5==@renvoi" or "renvoi6==@renvoi"or "renvoi7==@renvoi" or "renvoi8==@renvoi" or "renvoi9==@renvoi" or "renvoi10==@renvoi")
-    if col_math:
-        conditions.append(f"nbr_colonnes_math==@col_math")
-    if titre:
-        conditions.append(f"nom==@titre")
-    
-
-    # Utilisez la condition construite pour filtrer le DataFrame
-    if conditions:
-        query = " & ".join(conditions)
-        df_selection = df_article.query(query)
-    else:
-        # Si rien n'est sélectionné, affichez tout le DataFrame
-        df_selection = df_article
-
+    for item in bindings:
+        article.append(item["article"]["value"])
+        encyclopedie.append(item.get("encyclopedie", {}).get("value", ""))
+        volume.append(item.get("volume", {}).get("value", ""))
+        titre.append(item["titre"]["value"])
+        nbr_colonne.append(item.get("nbr_colonne", {}).get("value", ""))
+        complement_titre.append(item.get("complement_titre", {}).get("value", ""))
+        num_page_debut.append(item.get("num_page_debut", {}).get("value", ""))
+        num_page_fin.append(item.get("num_page_fin", {}).get("value", ""))
         
-
-
-
-    if not df_selection.empty:
-
+        # Convertir la valeur en une chaîne de caractères ou une chaîne vide si elle est None
+        signataire_value = item.get("signataires", {}).get("value", "")
+        signataire.append(signataire_value if signataire_value else "")
         
-
-        total_nbr_lignes = df_selection.shape[0]
-        encyclopedie_mode = df_selection['encyclopedie'].mode().iloc[0]
-        nbr_colonnes_mean = pd.to_numeric(df_selection['nbr_colonnes'], errors='coerce').mean()
-        theme = df_selection['theme1'].mode().iloc[0]
-
-
-
-
-        total1,total2,total3,total4=st.columns(4,gap='large')
-        with total1:
-            st.info("Nombre d'article",icon="📌")
-            st.metric(label="",value=f"{total_nbr_lignes:,.0f}")
-
-        with total2:
-            st.info('Encyclopédie la plus représentée', icon="📌")
-            st.text(encyclopedie_mode)
-
-        with total3:
-            st.info('Nombre de colonne moyen',icon="📌")
-            st.metric(label="",value=f"{nbr_colonnes_mean:,.0f}")
-
+        themes_value = item.get("theme", {}).get("value", "")
+        themes.append(themes_value if themes_value else "")
         
-        with total4:
-            st.info('Thème le plus présent',icon="📌")
-            st.text(theme)
+        ref_histoire_value = item.get("ref_histoire", {}).get("value", "")
+        ref_histoire.append(ref_histoire_value if ref_histoire_value else "")
+        
+        revue_citee_value = item.get("revue_citee", {}).get("value", "")
+        revue_citee.append(revue_citee_value if revue_citee_value else "")
+        
+        personne_citee_value = item.get("personnes_citees", {}).get("value", "")
+        personne_citee.append(personne_citee_value if personne_citee_value else "")
+        
+        renvoi_article_value = item.get("renvois_titre", {}).get("value", "")
+        renvoi_article.append(renvoi_article_value if renvoi_article_value else "")
+        
+        ouvrage_citee_value = item.get("ouvrages_cites", {}).get("value", "")
+        ouvrage_citee.append(ouvrage_citee_value if ouvrage_citee_value else "")
 
-        st.markdown("""---""")
+    # Créer un DataFrame pandas avec les données extraites
+    df_results = pd.DataFrame({
+        "Titre": titre,
+        "Encyclopedie": encyclopedie,
+        "Volume": volume,
+        "Nombre de Colonnes": nbr_colonne,
+        "Complément de Titre": complement_titre,
+        "Numéro de Page de Début": num_page_debut,
+        "Numéro de Page de Fin": num_page_fin,
+        "Signataire": [signataire_value.split(" ; ") if isinstance(signataire_value, str) else "" for signataire_value in signataire],
+        "Thèmes": [themes_value.split(" ; ") if isinstance(themes_value, str) else "" for themes_value in themes],
+        "Référence à l'Histoire": ref_histoire,
+        "Personne citée": [personne_citee_value.split(" ; ") if isinstance(personne_citee_value, str) else "" for personne_citee_value in personne_citee],
+        "Revue Citée": [revue_citee_value.split(" ; ") if isinstance(revue_citee_value, str) else "" for revue_citee_value in revue_citee],
+        "Ouvrages Cités" : [ouvrage_citee_value.split(" ; ") if isinstance(ouvrage_citee_value, str) else "" for ouvrage_citee_value in ouvrage_citee],
+        "Renvoi vers l'article" : [renvoi_article_value.split(" ; ") if isinstance(renvoi_article_value, str) else "" for renvoi_article_value in renvoi_article],
+    })
 
+    # Ajoutez la barre de recherche en temps réel
+    search_value = st_keyup("Rechercher", key="search")
 
-    
-    if not df_selection.empty: 
-        with st.expander("Filter par colonnes"):
-            showData = st.multiselect('Filter: ', df_selection.columns, default=["encyclopedie", "volume", "nom", "complement_nom", "signataire", "num_page_debut", "num_page_fin", "nbr_colonnes", "theme", "designant", "renvoi", "commentaire"])
-            
-        if not showData:
-            st.warning("Sélectionnez au moins un champ à afficher.")
+    # Vérifier si des filtres sont actifs
+    filters_active = any([st.session_state.get(f"{col}_value") for col in df_results.columns if col != "Titre"])
+
+    # Appliquer le filtre de recherche
+    if search_value:
+        if filters_active:
+            # Si des filtres sont actifs, rechercher uniquement dans le DataFrame filtré
+            df_filtered = df_results[df_results.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
         else:
-            # Afficher le tableau
-            st.dataframe(df_selection[showData], use_container_width=True)
-            
-            # Convertir le DataFrame en CSV avec encodage UTF-8
-            csv_data = df_selection[showData].to_csv().encode('utf-8')
-            
-            # Ajouter un bouton de téléchargement en CSV
-            st.download_button(
-                label="Télécharger en CSV (UTF-8)",
-                data=csv_data,
-                key="download-csv",  # Ajoutez la clé ici
-                on_click=None,  # Laissez "None" pour le téléchargement immédiat
-                help="Téléchargez le tableau au format CSV.",
-                mime="text/csv"  # Spécifiez le type MIME du fichier
-            )
+            # Sinon, rechercher dans tout le DataFrame
+            df_filtered = df_results[df_results.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
+    else:
+        # Si aucune valeur de recherche n'est fournie, afficher le DataFrame non filtré
+        df_filtered = df_results
+
+    if not df_filtered.empty:
+        with st.sidebar:
+            filters = {}
+            for col in df_filtered.columns:
+                if col != "Titre":
+                    # Aplatir les listes imbriquées avant d'extraire les valeurs uniques
+                    unique_values = df_filtered[col].explode().apply(pd.Series).stack().unique()
+                    # Enlever les éléments vides des choix de filtre
+                    unique_values = [value for value in unique_values if value != ""]
+                    filters[col] = st.multiselect(f'{col}:', unique_values)
+
+        # Appliquer les filtres
+        for col, vals in filters.items():
+            if vals:
+                df_filtered = df_filtered[df_filtered[col].apply(lambda x: any(val in x for val in vals))]
+
+        # Afficher le tableau filtré
+        st.dataframe(df_filtered, use_container_width=True)
+
+        # Convertir le DataFrame en CSV avec encodage UTF-8
+        csv_data = df_filtered.to_csv(index=False).encode('utf-8')
+
+        # Ajouter un bouton de téléchargement en CSV
+        st.download_button(
+            label="Télécharger en CSV (UTF-8)",
+            data=csv_data,
+            file_name='data.csv',  # Nom du fichier à télécharger
+            mime="text/csv",  # Spécifiez le type MIME du fichier
+            help="Téléchargez le tableau au format CSV (UTF-8)."
+        )
+
+        if not filters:
+            st.warning("Sélectionnez au moins un champ à filtrer.")
     else:
         st.warning("Aucun élément trouvé avec la sélection actuelle.")
 
-    
- 
-
-    
-
-  
-    
-    
-
-    # def display_references_tree(df):
-    #         # Create a directed graph
-    #         G = nx.DiGraph()
-
-    #         # Add nodes for each article
-    #         for index, row in df.iterrows():
-    #             article_name = f"{row['nom']} ({row['encyclopedie']})"
-    #             G.add_node(article_name)
-
-    #             # Iterate over renvoi columns
-    #             for i in range(1, 11):
-    #                 ref_name_col = f"renvoi{i}"
-    #                 ref_name = row[ref_name_col]
-    #                 if pd.notnull(ref_name) and ref_name.strip() != '':
-    #                     ref_id = f"{ref_name} ({row['encyclopedie']})"
-    #                     G.add_edge(article_name, ref_id)
-
-    #         # Calculate betweenness centrality
-    #         betweenness_centrality = nx.betweenness_centrality(G)
-
-    #         # Layout the graph for better visibility
-    #         pos = nx.kamada_kawai_layout(G)  # Change to a different layout
-
-    #         # Get node colors based on betweenness centrality
-    #         node_colors = [betweenness_centrality[node] for node in G.nodes()]
-
-    #         # Use seaborn to create a red color palette
-    #         red_palette = sns.color_palette("Reds", as_cmap=True)
-
-    #         # Display the graph
-    #         plt.figure(figsize=(16, 12))  # Adjust figure size
-    #         nx.draw(G, pos, with_labels=True, font_size=7, font_color='black', node_size=1000, node_color=node_colors, cmap=red_palette, edge_color='black', linewidths=2, alpha=0.85)
-
-    #         # Add a legend for node color
-    #         plt.axis('off')  # Disable axes
-    #         plt.margins(0.2, 0.2)  # Add margins
-    #         plt.gca().autoscale(tight=True)  # Automatically scale
-    #         st.pyplot(plt.gcf())  # Use st.pyplot to display the graph in Streamlit
-
-
-
-
-
-        
-
-
-
-
-    # if not df_selection.empty:
-    #     with st.expander("Afficher l'arborescence des renvois"):
-    #         display_references_tree(df_selection)
-
-
-   # Ajout d'un tableau avec les colonnes spécifiées
-    if not df_selection.empty:
-        
-            ouvrages_cites_data = []
-
-            # Parcourir les lignes du DataFrame sélectionné et collecter les données des ouvrages cités
-            for index, row in df_selection.iterrows():
-                ouvrages = []
-                for i in range(1, 12):
-                    ouvrage_col = f"ouvrage_cité_{i}"
-                    if pd.notnull(row[ouvrage_col]):
-                        ouvrages.append(str(row[ouvrage_col]))
-                
-                # Créer un dictionnaire avec les données de chaque article
-                if ouvrages:
-                    ouvrages_cites_data.append({
-                        'Nom de l\'article': row['nom'],
-                        'Encyclopédie': row['encyclopedie'],
-                        'Volume': row['volume'],
-                        'Ouvrage Cités 1': ouvrages[0] if len(ouvrages) > 0 else '',
-                        'Ouvrage Cités 2': ouvrages[1] if len(ouvrages) > 1 else '',
-                        'Ouvrage Cités 3': ouvrages[2] if len(ouvrages) > 2 else '',
-                        'Ouvrage Cités 4': ouvrages[3] if len(ouvrages) > 3 else '',
-                        'Ouvrage Cités 5': ouvrages[4] if len(ouvrages) > 4 else '',
-                        'Ouvrage Cités 6': ouvrages[5] if len(ouvrages) > 5 else '',
-                        'Ouvrage Cités 7': ouvrages[6] if len(ouvrages) > 6 else '',
-                        'Ouvrage Cités 8': ouvrages[7] if len(ouvrages) > 7 else '',
-                        'Ouvrage Cités 9': ouvrages[8] if len(ouvrages) > 8 else '',
-                        'Ouvrage Cités 10': ouvrages[9] if len(ouvrages) > 9 else '',
-                        'Ouvrage Cités 11': ouvrages[10] if len(ouvrages) > 10 else '',
-                    })
-
-            # Créer un DataFrame à partir de la liste de dictionnaires
-            ouvrages_cites_df = pd.DataFrame(ouvrages_cites_data, columns=['Nom de l\'article', 'Encyclopédie', 'Volume', 'Ouvrage Cités 1', 'Ouvrage Cités 2', 'Ouvrage Cités 3', 'Ouvrage Cités 4', 'Ouvrage Cités 5', 'Ouvrage Cités 6', 'Ouvrage Cités 7', 'Ouvrage Cités 8', 'Ouvrage Cités 9', 'Ouvrage Cités 10', 'Ouvrage Cités 11'])
-
-            # Afficher le DataFrame dans Streamlit
-            if not ouvrages_cites_df.empty:
-                st.dataframe(ouvrages_cites_df)
-            else:
-                st.warning("Aucun ouvrage cité trouvé pour la sélection actuelle.")
-
-
-
-
-
-
-
-
-
-
-    if not df_selection.empty:
-        # Séparez les thèmes en une liste
-        theme1_list = df_selection['theme1'].str.split(',').explode().str.strip()
-        
-        # Créez un DataFrame avec le décompte des thèmes
-        theme_counts = theme1_list.value_counts().reset_index()
-        theme_counts.columns = ['Thème', 'Nombre d\'articles']
-
-        # Créez un graphique à barres pour représenter la proportion des thèmes en fonction du nombre d'articles
-        fig = px.bar(theme_counts, x='Thème', y='Nombre d\'articles', title='Proportion des Thèmes en fonction du Nombre d\'Articles')
-
-        # Personnalisez le graphique si nécessaire
-        # fig.update_layout(barmode='group')
-
-        # Affichez le graphique dans Streamlit
-        st.plotly_chart(fig, use_container_width=True)
-
-
-        if not df_selection.empty:
-        # Calculez le nombre de pages par article
-            if not df_selection["num_page_debut"].empty and not df_selection["num_page_fin"].empty:
-                # Convertir les colonnes 'num_page_fin' et 'num_page_debut' en valeurs numériques
-                df_selection['num_page_fin'] = pd.to_numeric(df_selection['num_page_fin'], errors='coerce')
-                df_selection['num_page_debut'] = pd.to_numeric(df_selection['num_page_debut'], errors='coerce')
-
-                # Filtrer les lignes avec des pages valides
-                valid_pages = df_selection["num_page_fin"].fillna(0) >= df_selection["num_page_debut"].fillna(0)
-
-                
-                
-                # Filtrer les lignes avec des pages valides
-                df_valid_selection = df_selection[valid_pages]
-                
-                if not df_valid_selection.empty:
-                    df_valid_selection['Nombre de pages'] = df_valid_selection['num_page_fin'] - df_valid_selection['num_page_debut']
-                    
-                    # Séparez les thèmes en une liste
-                    theme1_list = df_valid_selection['theme1'].str.split(',').explode().str.strip()
-                    
-                    # Créez un DataFrame avec les thèmes et le nombre de pages pour chaque thème
-                    theme_page_counts = df_valid_selection.groupby(theme1_list)['Nombre de pages'].mean().reset_index()
-                    theme_page_counts.columns = ['Thème', 'Nombre de pages']
-
-                    # Créez un graphique à barres pour représenter le nombre de pages en fonction du thème
-                    fig = px.bar(theme_page_counts, x='Thème', y='Nombre de pages', title='Nombre de Pages par article en fonction du Thème')
-
-                    # Personnalisez le graphique si nécessaire
-                    # fig.update_layout(barmode='group')
-
-                    # Affichez le graphique dans Streamlit
-                    st.plotly_chart(fig, use_container_width=True)
+# Vérifier si le script est exécuté en tant que script principal
+if __name__ == "__main__":
+    Article()

@@ -2,7 +2,7 @@ from pyecharts import options as opts
 from pyecharts.charts import Bar
 from pyecharts.globals import ThemeType
 from streamlit_echarts import st_pyecharts
-from query import get_repartition_elements_citee_par_encyclopedie
+from Query import get_repartition_elements_citee_par_encyclopedie
 
 def bar_label():
     # Récupérer les valeurs depuis la fonction get_repartition_elements_citee_par_encyclopedie

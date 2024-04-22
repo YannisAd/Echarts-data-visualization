@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from SPARQLWrapper import SPARQLWrapper, JSON
-from query import query_sparql, All_Personne_Query
+from Query import query_sparql, All_Personne_Query
 
 def Personne():
     # Appel de la fonction query_sparql avec la requête All_Personne_Query et le nom de la base de données "personne"
