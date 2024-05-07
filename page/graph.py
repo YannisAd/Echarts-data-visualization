@@ -7,8 +7,8 @@ from Query import count_articles_with_attributes
 from ressources.graph_and_plot.pie import pie
 from ressources.graph_and_plot.bar_label import bar_label
 from ressources.graph_and_plot.pie_personne import display_most_cited_people_chart
-from ressources.graph_and_plot.network import render_article_sankey
-from streamlit_elements import elements, mui, html
+# from ressources.graph_and_plot.test import create_article_renvois_graph
+from ressources.graph_and_plot.heatmap import *
 
 
 import uuid
@@ -27,7 +27,8 @@ def graph(selected_plot=None):
     
     # Afficher le graphique approprié en fonction de la sélection
     if selected_plot == "Renvois en fonction de la cible":
-        elements(pie(), bar_label())
+        pie()
+
     elif selected_plot == "Renvois en fonction des encyclopédie":
         bar_label()
         
@@ -35,7 +36,7 @@ def graph(selected_plot=None):
         display_most_cited_people_chart()
     
     elif selected_plot == "Reseau des renvois":
-        render_article_sankey()
+        pie()
 
 
 
