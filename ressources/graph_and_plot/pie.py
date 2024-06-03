@@ -1,4 +1,4 @@
-from Query import count_articles_with_attributes
+from query import count_articles_with_attributes
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from streamlit_echarts import st_pyecharts
