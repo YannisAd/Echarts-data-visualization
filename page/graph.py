@@ -3,7 +3,7 @@ import streamlit as st
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from streamlit_echarts import st_pyecharts
-from Query import count_articles_with_attributes
+from query import count_articles_with_attributes
 from ressources.graph_and_plot.pie import pie
 from ressources.graph_and_plot.bar_label import bar_label
 from ressources.graph_and_plot.pie_personne import display_most_cited_people_chart

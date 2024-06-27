@@ -12,7 +12,7 @@ from page.personne import Personne
 from page.article import Article
 from page.exploration import Exploration
 from page.graph import graph
-from Query import create_local_DB, parse_renvoi_json
+from query import create_local_DB, parse_renvoi_json
 
 #from query import *
 import time
